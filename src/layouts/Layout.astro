@@ -16,7 +16,7 @@ const { title = "Osuc" }: Props = Astro.props;
         <link rel="icon" href="/favicon.svg" />
         <title>{title}</title>
     </head>
-    <body class="relative">
+    <body class="relative has-[#menu-toggle:checked]:overflow-hidden">
         <Header />
         <slot />
     </body>

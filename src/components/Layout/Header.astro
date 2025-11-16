@@ -1,33 +1,77 @@
 ---
 import OsucIcon from "@/components/Icons/OsucIcon.astro";
+import MenuIcon from "@/components/Icons/MenuIcon.astro";
 ---
 
 <header
-    class="sticky top-0 z-50 w-full flex justify-between bg-background px-8 py-4 text-foreground transition-all duration-200"
+    class="sticky top-0 z-50 w-full bg-background text-foreground transition-all duration-200"
     id="nav-header"
 >
-    <a href="/" class="flex items-center gap-4 text-2xl font-bold align-middle">
-        <OsucIcon size={40} className="" />
-        <h1>Open Source UC</h1>
-    </a>
-    <nav>
-        <ul
-            class="flex gap-8 text-center items-center align-middle h-full [&>li]:text-lg"
+    <input
+        type="checkbox"
+        name="menu-toggle"
+        id="menu-toggle"
+        class="hidden peer/menu"
+    />
+
+    <div class="flex justify-between px-4 md:px-8 py-4 items-center">
+        <a
+            href="/"
+            class="flex items-center gap-2 md:gap-4 text-xl md:text-2xl font-bold align-middle z-50"
         >
-            <li><a href="#" class="hover:underline">About US</a></li>
-            <li><a href="/#projects" class="hover:underline">Projects</a></li>
+            <OsucIcon size={32} className="md:w-10 md:h-10" />
+            <h1 class="hidden sm:block">Open Source UC</h1>
+        </a>
+
+        <nav class="hidden md:block">
+            <ul class="flex gap-8 items-center [&>li]:text-lg">
+                <li>
+                    <a href="#" class="hover:underline">About US</a>
+                </li>
+                <li>
+                    <a href="/#projects" class="hover:underline">Projects</a>
+                </li>
+            </ul>
+        </nav>
+
+        <label
+            for="menu-toggle"
+            class="md:hidden z-50 cursor-pointer text-foreground"
+        >
+            <MenuIcon size={28} />
+        </label>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav
+        id="mobile-menu"
+        class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-2/3 h-screen bg-background border-l-2 border-foreground/10 transition-all duration-300 z-40"
+    >
+        <ul class="flex flex-col p-8 pt-20 gap-8 text-left [&>li]:text-lg">
+            <li>
+                <a href="#" class="hover:underline block">About US</a>
+            </li>
+            <li>
+                <a href="/#projects" class="hover:underline block">Projects</a>
+            </li>
         </ul>
     </nav>
+
+    <!-- Overlay para cerrar el menú al hacer click fuera -->
+    <label
+        for="menu-toggle"
+        class="md:hidden fixed inset-0 bg-black/50 opacity-0 peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto pointer-events-none transition-opacity duration-300 z-30"
+    ></label>
 </header>
 
 <!-- Script para ocultar el header al hacer scroll -->
 
-<script>
+<!-- <script>
     let lastScrollTop = 0;
     let scrollStartPosition = 0;
     let isScrollingDown = false;
     const header = document.getElementById("nav-header");
-    const scrollThreshold = 200;
+    const scrollThreshold = 50;
 
     if (!header) {
         throw new Error("Header element not found");
@@ -56,4 +100,4 @@ import OsucIcon from "@/components/Icons/OsucIcon.astro";
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
-</script>
+</script> -->
