@@ -1,0 +1,16 @@
+:root {
+    --background: #1f1b19;
+    --foreground: #E4E4E4;
+    --primary: #138DFF;
+    --secondary: #B39CD0;
+    --subtle: #FFC1CC;
+  }
+
+@theme static inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-subtle: var(--subtle);
+    --font-sans: 'Funnel Display Variable', sans-serif;
+}

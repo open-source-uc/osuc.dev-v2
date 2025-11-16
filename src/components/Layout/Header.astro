@@ -1,0 +1,59 @@
+---
+import OsucIcon from "@/components/Icons/OsucIcon.astro";
+---
+
+<header
+    class="sticky top-0 z-50 w-full flex justify-between bg-background px-8 py-4 text-foreground transition-all duration-200"
+    id="nav-header"
+>
+    <a href="/" class="flex items-center gap-4 text-2xl font-bold align-middle">
+        <OsucIcon size={40} className="" />
+        <h1>Open Source UC</h1>
+    </a>
+    <nav>
+        <ul
+            class="flex gap-8 text-center items-center align-middle h-full [&>li]:text-lg"
+        >
+            <li><a href="#" class="hover:underline">About US</a></li>
+            <li><a href="/#projects" class="hover:underline">Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Script para ocultar el header al hacer scroll -->
+
+<script>
+    let lastScrollTop = 0;
+    let scrollStartPosition = 0;
+    let isScrollingDown = false;
+    const header = document.getElementById("nav-header");
+    const scrollThreshold = 200;
+
+    if (!header) {
+        throw new Error("Header element not found");
+    }
+
+    window.addEventListener("scroll", () => {
+        const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && !isScrollingDown) {
+            isScrollingDown = true;
+            scrollStartPosition = lastScrollTop;
+        } else if (scrollTop < lastScrollTop && isScrollingDown) {
+            isScrollingDown = false;
+            scrollStartPosition = lastScrollTop;
+        }
+
+        if (
+            isScrollingDown &&
+            scrollTop - scrollStartPosition > scrollThreshold
+        ) {
+            header.style.transform = "translateY(-100%)";
+        } else if (!isScrollingDown) {
+            header.style.transform = "translateY(0)";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+</script>

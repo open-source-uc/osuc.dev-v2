@@ -1,0 +1,80 @@
+---
+import type { Repo } from "@/types/repos";
+import StarIcon from "@/components/Icons/StarIcon.astro";
+import ForkIcon from "@/components/Icons/ForkIcon.astro";
+
+interface Props {
+    repo: Repo;
+    className?: string;
+    bg_position: "left" | "right";
+}
+
+const { repo, className = "", bg_position = "right" }: Props = Astro.props;
+const {
+    name,
+    description,
+    primaryLanguage,
+    stargazerCount,
+    forkCount,
+    openGraphImageUrl,
+} = repo;
+---
+
+<article
+    class={`group relative bg-background/60 h-64 overflow-hidden rounded-2xl border border-foreground/10 hover:border-primary/30 transition-colors group ${className}`}
+>
+    <!-- Imagen del Social Preview - lado derecho -->
+    <div
+        class={`absolute top-0 ${bg_position}-0 w-full h-full opacity-25 z-10`}
+    >
+        <img
+            src={openGraphImageUrl}
+            alt={name}
+            class="w-full h-full object-cover blur-2xl brightness-50 group-hover:blur-xs transition-all duration-75"
+        />
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 h-full p-5 flex flex-col justify-between">
+        <!-- Header -->
+        <div>
+            <a
+                href={`https://github.com/open-source-uc/${name}`}
+                target="_blank"
+            >
+                <h3
+                    class="text-lg font-semibold text-foreground mb-1.5 hover:underline"
+                >
+                    {name}
+                </h3>
+            </a>
+            {
+                description && (
+                    <p class="text-sm text-foreground/60 line-clamp-2">
+                        {description}
+                    </p>
+                )
+            }
+        </div>
+
+        <!-- Footer -->
+        <div class="flex items-center gap-4 text-xs text-foreground/50">
+            {
+                primaryLanguage && (
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-primary/70" />
+                        <span>{primaryLanguage.name}</span>
+                    </div>
+                )
+            }
+            <div class="flex items-center gap-1">
+                <StarIcon size={14} className="w-3.5 h-3.5" />
+                <span>{stargazerCount}</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <ForkIcon size={14} className="w-3.5 h-3.5" />
+                <span>{forkCount}</span>
+            </div>
+        </div>
+    </div>
+</article>

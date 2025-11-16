@@ -1,0 +1,149 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BentoRepo from "@/components/BentoRepo.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
+import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
+import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
+import InstagramIcon from "@/components/Icons/InstagramIcon.astro";
+import IssueIcon from "@/components/Icons/IssueIcon.astro";
+import { getPinnedRepos } from "@/utils/github";
+
+const githubToken = import.meta.env.GITHUB_TOKEN;
+const orgName = "open-source-uc";
+
+const pinnedRepos = await getPinnedRepos(orgName, githubToken);
+---
+
+<Layout>
+    <main
+        class="min-h-screen bg-background px-10 lg:px-20 xl:px-50 text-foreground"
+    >
+        <section
+            id="hero"
+            class="h-screen grid grid-cols-1 lg:grid-cols-2 items-center content-center"
+        >
+            <div
+                class="flex flex-col gap-10 items-center text-center mt-20 lg:mt-0"
+            >
+                <h1 class="text-7xl font-bold">
+                    Open Source <span class="text-primary">UC</span>
+                </h1>
+                <p class="text-2xl">
+                    Somos una comunidad de estudiantes de la Universidad
+                    Catolica de Chile. Apasionada por crear e impulsar proyectos
+                    bacanes de código abierto.
+                </p>
+                <div class="flex gap-10">
+                    <LinkButton
+                        text="Únete a la comunidad"
+                        href="#"
+                        type="primary"
+                    />
+                    <LinkButton
+                        text="Sobre nosotros"
+                        href="/about"
+                        type="secondary"
+                    />
+                </div>
+            </div>
+            <div class="grid place-content-center bg-white m-20 rounded-4xl">
+                <img
+                    src="https://images.seeklogo.com/logo-png/30/2/github-logo-png_seeklogo-304612.png"
+                    alt="placeholder"
+                />
+            </div>
+        </section>
+        <section id="projects" class="flex flex-col items-center w-full gap-4">
+            <h2 class="font-bold text-5xl pb-6">Proyectos destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-4">
+                {
+                    pinnedRepos.slice(0, 2).map((repo, index) => {
+                        const bg_position = index % 2 === 0 ? "right" : "left";
+                        return (
+                            <BentoRepo
+                                repo={repo}
+                                className=""
+                                bg_position={bg_position}
+                            />
+                        );
+                    })
+                }
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-4">
+                {
+                    pinnedRepos.slice(2).map((repo, index) => {
+                        const rowIndex = Math.floor(index / 2);
+                        const isFirstInRow = index % 2 === 0;
+
+                        let widthClass;
+                        if (rowIndex % 2 === 0) {
+                            widthClass = isFirstInRow
+                                ? "md:col-span-2"
+                                : "md:col-span-1";
+                        } else {
+                            widthClass = isFirstInRow
+                                ? "md:col-span-1"
+                                : "md:col-span-2";
+                        }
+
+                        const bg_position =
+                            (index + 2) % 2 === 0 ? "right" : "left";
+                        return (
+                            <BentoRepo
+                                repo={repo}
+                                className={widthClass}
+                                bg_position={bg_position}
+                            />
+                        );
+                    })
+                }
+            </div>
+            <div class="flex gap-10">
+                <LinkButton
+                    text="Ve las issues"
+                    href="https://github.com/issues?q=is:open+is:issue+archived:false+user:open-source-uc"
+                    className="flex items-center gap-2"
+                    type="secondary"><IssueIcon /></LinkButton
+                >
+                <LinkButton
+                    text="Ve nuestra organizacion"
+                    href="https://github.com/open-source-uc"
+                    className="flex items-center gap-2"
+                    type="secondary"><GitHubIcon size={24} /></LinkButton
+                >
+            </div>
+        </section>
+        <section
+            id="community"
+            class="flex flex-col items-center w-full gap-4 mt-20 py-40"
+        >
+            <h2 class="font-bold text-5xl pb-6">Únete a nuestra comunidad</h2>
+            <p class="text-center text-xl max-w-3xl">
+                Participa en la creación y colaboración en proyectos de distinto
+                ámbito y alcance. Únete a desarrollar uno de los proyectos que
+                organizamos cada semestre o a apoyar a impulsar la comunidad.
+            </p>
+            <div class="flex gap-10 mt-6">
+                <LinkButton
+                    text="Únete a nuestro Discord"
+                    href="https://discord.gg/jRdQCGn6yS"
+                    className="flex items-center gap-4"
+                    type="secondary"><DiscordIcon size={24} /></LinkButton
+                >
+                <LinkButton
+                    text="Grupo de Telegram"
+                    href="https://t.me/+zQdotSmFEIRkMzcx"
+                    className="flex items-center gap-4"
+                    type="secondary"><TelegramIcon size={24} /></LinkButton
+                >
+                <LinkButton
+                    text="Síguenos en Instagram"
+                    href="#"
+                    className="flex items-center gap-4"
+                    type="secondary"><InstagramIcon size={24} /></LinkButton
+                >
+            </div>
+        </section>
+    </main>
+</Layout>
