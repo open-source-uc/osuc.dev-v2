@@ -21,7 +21,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
     <div class="flex justify-between px-4 md:px-8 py-4 items-center">
         <a
             href="/"
-            class="flex items-center gap-2 md:gap-4 text-xl md:text-2xl font-bold align-middle z-50"
+            class="flex items-center gap-2 md:gap-4 text-xl md:text-2xl font-bold align-middle"
         >
             <OsucIcon size={32} className="md:w-10 md:h-10" />
             <h1 class="hidden sm:block">Open Source UC</h1>
@@ -40,18 +40,39 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
 
         <label
             for="menu-toggle"
-            class="md:hidden z-50 cursor-pointer text-foreground"
+            class="md:hidden z-50 cursor-pointer text-foreground relative"
         >
-            <MenuIcon size={28} />
+            <MenuIcon size={32} />
         </label>
     </div>
 
     <!-- Mobile menu -->
     <nav
         id="mobile-menu"
-        class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-full h-screen bg-background transition-all duration-300 z-40"
+        class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-full h-screen bg-background transition-all duration-300 z-55"
     >
         <div class="flex flex-col h-full justify-between p-8 pt-20">
+            <!-- Botón de cerrar -->
+            <label
+                for="menu-toggle"
+                class="absolute top-6 right-6 cursor-pointer text-foreground hover:text-primary transition-colors"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </label>
+
             <!-- Logo y título -->
             <div class="flex flex-col gap-8">
                 <div class="flex items-center gap-4">
@@ -103,7 +124,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram Open Source UC"
-                        class="hover:text-primary transition-colors"
+                        class="hover:text-[#c13584] transition-colors"
                     >
                         <InstagramIcon size={32} />
                     </a>
@@ -112,7 +133,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Telegram Open Source UC"
-                        class="hover:text-primary transition-colors"
+                        class="hover:text-[#24A1DE] transition-colors"
                     >
                         <TelegramIcon size={32} />
                     </a>
@@ -121,7 +142,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Discord Open Source UC"
-                        class="hover:text-primary transition-colors"
+                        class="hover:text-[#5865F2] transition-colors"
                     >
                         <DiscordIcon size={32} />
                     </a>
@@ -130,7 +151,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub Open Source UC"
-                        class="hover:text-primary transition-colors"
+                        class="hover:text-[#181717] transition-colors"
                     >
                         <GitHubIcon size={32} />
                     </a>
@@ -142,7 +163,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
     <!-- Overlay para cerrar el menú al hacer click fuera -->
     <label
         for="menu-toggle"
-        class="md:hidden fixed inset-0 bg-black/50 opacity-0 peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto pointer-events-none transition-opacity duration-300 z-30"
+        class="md:hidden fixed inset-0 bg-black/50 opacity-0 peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto pointer-events-none transition-opacity duration-300 z-54"
     ></label>
 </header>
 
