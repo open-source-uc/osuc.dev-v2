@@ -1,0 +1,137 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import coordsData from "@/data/coords.json";
+---
+
+<Layout
+    className="flex flex-col justify-center items-center px-4 sm:px-6"
+    title="Sobre Open Source UC"
+    description="Conoce más sobre Open Source UC, una iniciativa estudiantil de innovación tecnológica en la Pontificia Universidad Católica de Chile."
+>
+    <main
+        class="pt-15 pb-10 flex flex-col justify-center text-foreground max-w-xl w-full gap-5"
+    >
+        <header class="flex flex-col gap-5">
+            <h1 class="text-3xl sm:text-4xl font-bold">
+                Sobre Open Source UC<span class="text-primary">.</span>
+            </h1>
+            <p class="text-sm sm:text-base">
+                Open Source UC es una iniciativa estudiantil de innovación
+                tecnológica que impulsa a estudiantes a colaborar y crecer
+                profesionalmente a través de la filosofía open-source en la
+                Pontificia Universidad Católica de Chile.
+            </p>
+        </header>
+
+        <section aria-labelledby="why-we-exist" class="flex flex-col gap-5">
+            <h2 id="why-we-exist" class="text-xl sm:text-2xl font-bold">
+                ¿Por qué existimos?
+            </h2>
+            <ul
+                class="list-disc list-outside pl-5 flex flex-col gap-4 sm:gap-5 text-sm sm:text-base"
+            >
+                <li>
+                    Creamos un espacio de aprendizaje práctico que permite a
+                    nuestros miembros ir más allá de los cursos universitarios,
+                    aplicando conocimientos en proyectos con impacto real y
+                    desarrollando habilidades que demanda la industria
+                    tecnológica.
+                </li>
+                <li>
+                    Construimos una comunidad de crecimiento mutuo donde se
+                    comparten experiencias, conocimientos y motivaciones. Al
+                    desarrollar de forma pública, Open Source reúne a
+                    estudiantes con diversos niveles de experiencia, fomentando
+                    el mentoring y la colaboración entre pares.
+                </li>
+                <li>
+                    Promovemos la transparencia y el aprendizaje abierto
+                    mediante proyectos de código abierto que no solo benefician
+                    a nuestra comunidad, sino que también contribuyen al
+                    ecosistema tecnológico regional y permiten que otros
+                    aprendan de nuestro trabajo.
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="history" class="flex flex-col gap-5">
+            <h2 id="history" class="text-xl sm:text-2xl font-bold">Historia</h2>
+            <p class="text-sm sm:text-base">
+                Desde el año 2006, existieron grupos como OpenPUC que buscaban
+                incentivar el interés por el código abierto en la universidad.
+                En el año 2017, un grupo de estudiantes - inspirados en OpenPUC
+                - creó Open Source UC, organización que se mantuvo activa hasta
+                finales del 2018. Desde el año 2021 se reorganizó la iniciativa,
+                quedando en la comunidad que conocemos ahora.
+            </p>
+        </section>
+
+        <section
+            aria-labelledby="coordinators-timeline"
+            class="flex flex-col gap-5"
+        >
+            <h2
+                id="coordinators-timeline"
+                class="text-xl sm:text-2xl font-bold"
+            >
+                Timeline de Coordinadores
+            </h2>
+            <div class="pl-4 sm:pl-5 relative flex flex-col gap-8 sm:gap-10">
+                <div
+                    class="w-0.5 h-full bg-foreground absolute left-0"
+                    aria-hidden="true"
+                >
+                </div>
+                {
+                    coordsData.map((semester) => (
+                        <article
+                            id={"semester-" + semester.year}
+                            class="flex flex-col gap-4 sm:gap-5"
+                        >
+                            <h3 class="text-primary font-bold text-lg sm:text-xl">
+                                <time datetime={semester.year}>
+                                    {semester.year}
+                                </time>
+                            </h3>
+                            <ul class="flex flex-col gap-6 sm:gap-10 list-none">
+                                {semester.leaders.map((leader) => {
+                                    const { name, description, githubUser } =
+                                        leader;
+                                    return (
+                                        <li class="flex gap-4 sm:gap-6 items-start sm:items-center">
+                                            <img
+                                                src={`https://github.com/${githubUser}.png`}
+                                                alt={`Foto de perfil de ${name}`}
+                                                class="rounded-full size-12 sm:size-15 shrink-0"
+                                                loading="lazy"
+                                                width="60"
+                                                height="60"
+                                            />
+                                            <div class="flex flex-col gap-1">
+                                                <h4 class="font-bold text-sm sm:text-base">
+                                                    {name}
+                                                </h4>
+                                                <p class="text-xs sm:text-sm text-foreground/80">
+                                                    {description}
+                                                </p>
+                                                <a
+                                                    href={`https://github.com/${githubUser}`}
+                                                    class="text-primary hover:underline text-xs sm:text-sm"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label={`Perfil de GitHub de ${name}`}
+                                                >
+                                                    GitHub
+                                                </a>
+                                            </div>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </article>
+                    ))
+                }
+            </div>
+        </section>
+    </main>
+</Layout>

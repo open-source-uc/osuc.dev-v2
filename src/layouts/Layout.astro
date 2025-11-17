@@ -1,23 +1,30 @@
 ---
 import "@/styles/global.css";
 import Header from "@/components/Layout/Header.astro";
+import Footer from "@/components/Layout/Footer.astro";
 interface Props {
     title?: string;
+    description?: string;
+    className?: string;
 }
 
-const { title = "Osuc" }: Props = Astro.props;
+const { title = "Osuc", description, className = "" }: Props = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.svg" />
+        {description && <meta name="description" content={description} />}
         <title>{title}</title>
     </head>
-    <body class="relative has-[#menu-toggle:checked]:overflow-hidden">
+    <body
+        class={`relative has-[#menu-toggle:checked]:overflow-hidden bg-background ${className}`}
+    >
         <Header />
         <slot />
+        <Footer />
     </body>
 </html>

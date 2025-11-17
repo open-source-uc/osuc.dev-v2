@@ -1,0 +1,111 @@
+---
+import OsucIcon from "@components/Icons/OsucIcon.astro";
+import InstagramIcon from "@components/Icons/InstagramIcon.astro";
+import TelegramIcon from "@components/Icons/TelegramIcon.astro";
+import LinkedinIcon from "@components/Icons/LinkedinIcon.astro";
+import GitHubIcon from "@components/Icons/GitHubIcon.astro";
+
+interface Props {
+    className?: string;
+}
+
+const { className = "" }: Props = Astro.props;
+---
+
+<footer
+    class={`flex justify-center w-full bg-black text-foreground/75 py-10 px-6 sm:px-10 ${className}`}
+>
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 max-w-6xl w-full"
+    >
+        <div
+            class="flex gap-2 h-full items-start justify-center sm:justify-start sm:col-span-2 lg:col-span-1"
+        >
+            <OsucIcon className="w-10 h-10 sm:w-12 sm:h-12 mt-3 sm:mt-4 mb-2" />
+            <p class="text-5xl sm:text-6xl font-bold">osuc</p>
+        </div>
+        <div class="flex flex-col text-center sm:text-left">
+            <h3 class="font-bold text-base sm:text-lg mb-2">Information</h3>
+            <ul class="flex flex-col gap-1 text-sm sm:text-base">
+                <li>
+                    <a href="/" class="hover:text-foreground transition-colors"
+                        >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/conduct"
+                        target="_blank"
+                        class="hover:text-foreground transition-colors"
+                        >Code of Conduct</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="/about"
+                        class="hover:text-foreground transition-colors">About</a
+                    >
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col text-center sm:text-left">
+            <h3 class="font-bold text-base sm:text-lg mb-2">Support</h3>
+            <ul class="flex flex-col gap-1 text-sm sm:text-base">
+                <li>
+                    <a
+                        href="mailto:coord@osuc.dev"
+                        class="hover:text-foreground transition-colors"
+                        >Contact</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="mailto:help@osuc.dev"
+                        class="hover:text-foreground transition-colors">Help</a
+                    >
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col items-center">
+            <h3 class="font-bold text-base sm:text-lg mb-2">Social Media</h3>
+            <div class="flex justify-center sm:justify-start gap-4 mt-2">
+                <a
+                    href="https://instagram.com/osuc.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram Open Source UC"
+                    class="hover:text-[#c13584] transition-colors"
+                >
+                    <InstagramIcon size={24} />
+                </a>
+                <a
+                    href="https://t.me/+zQdotSmFEIRkMzcx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram Open Source UC"
+                    class="hover:text-[#24A1DE] transition-colors"
+                >
+                    <TelegramIcon size={24} />
+                </a>
+                <a
+                    href="https://www.linkedin.com/company/open-source-euc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Open Source UC"
+                    class="hover:text-[#0077B5] transition-colors"
+                >
+                    <LinkedinIcon size={24} } />
+                </a>
+                <a
+                    href="https://github.com/open-source-uc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Open Source UC"
+                    class="hover:text-[#181717] transition-colors"
+                >
+                    <GitHubIcon size={24} />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
