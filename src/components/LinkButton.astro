@@ -9,7 +9,7 @@ interface Props {
 const { text, type = "primary", href, className = "" }: Props = Astro.props;
 
 const baseClasses =
-    "px-6 py-2 rounded-tl-2xl rounded-br-2xl font-medium transition-colors duration-150";
+    "px-6 py-2 rounded-sm rounded-tl-2xl rounded-br-2xl font-medium transition-colors duration-150";
 const typeClasses = {
     primary: "bg-primary text-white hover:bg-primary/80",
     secondary:
