@@ -1,6 +1,10 @@
 ---
 import OsucIcon from "@/components/Icons/OsucIcon.astro";
 import MenuIcon from "@/components/Icons/MenuIcon.astro";
+import InstagramIcon from "@/components/Icons/InstagramIcon.astro";
+import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
+import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
+import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
 ---
 
 <header
@@ -45,16 +49,94 @@ import MenuIcon from "@/components/Icons/MenuIcon.astro";
     <!-- Mobile menu -->
     <nav
         id="mobile-menu"
-        class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-2/3 h-screen bg-background border-l-2 border-foreground/10 transition-all duration-300 z-40"
+        class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-full h-screen bg-background transition-all duration-300 z-40"
     >
-        <ul class="flex flex-col p-8 pt-20 gap-8 text-left [&>li]:text-lg">
-            <li>
-                <a href="/about" class="hover:underline block">About US</a>
-            </li>
-            <li>
-                <a href="/#projects" class="hover:underline block">Projects</a>
-            </li>
-        </ul>
+        <div class="flex flex-col h-full justify-between p-8 pt-20">
+            <!-- Logo y título -->
+            <div class="flex flex-col gap-8">
+                <div class="flex items-center gap-4">
+                    <OsucIcon size={48} />
+                    <h2 class="text-3xl font-bold">Open Source UC</h2>
+                </div>
+
+                <!-- Links de navegación -->
+                <ul class="flex flex-col gap-6 text-2xl">
+                    <li>
+                        <a
+                            href="/"
+                            class="hover:text-primary transition-colors block"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/about"
+                            class="hover:text-primary transition-colors block"
+                            >About US</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/#projects"
+                            class="hover:text-primary transition-colors block"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/conduct"
+                            class="hover:text-primary transition-colors block"
+                            >Code of Conduct</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="flex flex-col gap-6">
+                <h3 class="text-xl font-semibold text-foreground/80">
+                    Síguenos
+                </h3>
+                <div class="flex gap-6">
+                    <a
+                        href="https://instagram.com/osuc.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram Open Source UC"
+                        class="hover:text-primary transition-colors"
+                    >
+                        <InstagramIcon size={32} />
+                    </a>
+                    <a
+                        href="https://t.me/+zQdotSmFEIRkMzcx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Telegram Open Source UC"
+                        class="hover:text-primary transition-colors"
+                    >
+                        <TelegramIcon size={32} />
+                    </a>
+                    <a
+                        href="https://discord.gg/jRdQCGn6yS"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Discord Open Source UC"
+                        class="hover:text-primary transition-colors"
+                    >
+                        <DiscordIcon size={32} />
+                    </a>
+                    <a
+                        href="https://github.com/open-source-uc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub Open Source UC"
+                        class="hover:text-primary transition-colors"
+                    >
+                        <GitHubIcon size={32} />
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <!-- Overlay para cerrar el menú al hacer click fuera -->
