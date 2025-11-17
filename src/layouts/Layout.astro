@@ -5,10 +5,18 @@ import Footer from "@/components/Layout/Footer.astro";
 interface Props {
     title?: string;
     description?: string;
+    image?: string;
     className?: string;
 }
 
-const { title = "Osuc", description, className = "" }: Props = Astro.props;
+const {
+    title = "Open Source UC - Comunidad de desarrollo open source",
+    description = "Comunidad estudiantil de la Universidad Católica de Chile dedicada a crear e impulsar proyectos de código abierto. Únete a nosotros para aprender, colaborar y crecer.",
+    image = "/og-image.png",
+    className = "",
+}: Props = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -16,9 +24,39 @@ const { title = "Osuc", description, className = "" }: Props = Astro.props;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.svg" />
-        {description && <meta name="description" content={description} />}
+
+        <!-- SEO Básico -->
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="open source, código abierto, universidad católica, programación, desarrollo, comunidad, hackathon, proyectos, software libre"
+        />
+        <meta name="author" content="Open Source UC" />
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(image, Astro.site)} />
+        <meta property="og:site_name" content="Open Source UC" />
+        <meta property="og:locale" content="es_CL" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalURL} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+        <!-- Favicon -->
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+        <!-- Robots -->
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
     </head>
     <body
         class={`relative has-[#menu-toggle:checked]:overflow-hidden bg-background ${className}`}
