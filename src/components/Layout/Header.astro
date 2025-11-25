@@ -51,7 +51,9 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
         id="mobile-menu"
         class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-full h-screen bg-background transition-all duration-300 z-55"
     >
-        <div class="flex flex-col h-full justify-between p-8 pt-20">
+        <div
+            class="flex flex-col h-full justify-between p-8 pt-20 safe-bottom-extra"
+        >
             <!-- Botón de cerrar -->
             <label
                 for="menu-toggle"
@@ -114,7 +116,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
             </div>
 
             <!-- Redes sociales -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 safe-bottom">
                 <h3 class="text-xl font-semibold text-foreground/80">
                     Síguenos
                 </h3>
