@@ -34,14 +34,14 @@ Representación textual:
 
 - Asamblea de personas miembros
 - Directorio
-- Presidencia / Coordinación General
-- Tesorería / Finanzas
-- Secretaría / Administración
-- Presidencia / Coordinación Alumni
+    - Presidencia / Coordinación General
+    - Tesorería / Finanzas
+    - Secretaría / Administración
+    - Presidencia / Coordinación Alumni
 - Roles operativos
-- Encargado/a de Eventos, Comunicaciones y Marketing
-- Encargado/a de Proyectos / Tech
-- Encargado/a de Comunidad e Inclusión
+    - Encargado/a de Eventos, Comunicaciones y Marketing
+    - Encargado/a de Proyectos / Tech
+    - Encargado/a de Comunidad e Inclusión
 
 ---
 
