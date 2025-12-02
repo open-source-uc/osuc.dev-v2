@@ -3,6 +3,11 @@ title: "Cargos y estructura comunitaria de Open Source eUC"
 description: "Estructura organizacional, cargos formales y roles operativos necesarios para mantener el funcionamiento de la comunidad"
 ---
 
+> ⚠️ **Aviso**
+>
+> Este documento actualmente se encuentra en desarrollo, no es el documento final.
+> Cualquier sugerencia se puede hacer a **<comunidad@ousc.dev>**, **<contacto@osuc.dev>** o hablando con algun coordinador.
+
 > ⚠️ **TLDR:**
 >
 > Este documento describe la estructura organizacional, los cargos formales y los roles operativos necesarios para mantener el funcionamiento de la comunidad, resguardando la distribución de responsabilidades y evitando la concentración de poder en una sola persona.
@@ -34,14 +39,14 @@ Representación textual:
 
 - Asamblea de personas miembros
 - Directorio
-    - Presidencia / Coordinación General
-    - Tesorería / Finanzas
-    - Secretaría / Administración
-    - Presidencia / Coordinación Alumni
+  - Presidencia / Coordinación General
+  - Tesorería / Finanzas
+  - Secretaría / Administración
+  - Presidencia / Coordinación Alumni
 - Roles operativos
-    - Encargado/a de Eventos, Comunicaciones y Marketing
-    - Encargado/a de Proyectos / Tech
-    - Encargado/a de Comunidad e Inclusión
+  - Encargado/a de Eventos, Comunicaciones y Marketing
+  - Encargado/a de Proyectos / Tech
+  - Encargado/a de Comunidad e Inclusión
 
 ---
 
@@ -101,18 +106,18 @@ La Presidencia / Coordinación General tiene por finalidad articular el funciona
 - Coordinar las reuniones del Directorio y, cuando corresponda, de la Asamblea.
 - Facilitar la definición del plan de trabajo semestral o anual de la comunidad.
 - Representar a Open Source eUC ante:
-- La Pontificia Universidad Católica de Chile y otras instituciones de educación superior.
-- Otras comunidades y organizaciones de software libre y de código abierto.
-- Eventuales auspiciadores, organizaciones colaboradoras u otras entidades externas.
+  - La Pontificia Universidad Católica de Chile y otras instituciones de educación superior.
+  - Otras comunidades y organizaciones de software libre y de código abierto.
+  - Eventuales auspiciadores, organizaciones colaboradoras u otras entidades externas.
 - Promover el cumplimiento del Código de Conducta y actuar como punto de escalamiento en situaciones complejas o conflictivas.
 - Asegurar la coordinación entre los distintos roles operativos.
 
 #### Limitaciones y contrapesos
 
 - La Presidencia / Coordinación General no puede, por sí sola:
-    - Autorizar gastos por sobre el monto que se defina internamente.
-    - Imponer sanciones a miembros de la comunidad.
-    - Modificar documentos fundamentales sin los procedimientos establecidos.
+  - Autorizar gastos por sobre el monto que se defina internamente.
+  - Imponer sanciones a miembros de la comunidad.
+  - Modificar documentos fundamentales sin los procedimientos establecidos.
 - Las decisiones críticas deberán contar con la aprobación, al menos, de una persona adicional del Directorio (por ejemplo, Tesorería o Secretaría).
 
 ---
@@ -126,8 +131,8 @@ La Tesorería / Finanzas tiene por finalidad administrar de manera transparente 
 #### Responsabilidades principales
 
 - Llevar un registro actualizado de:
-    - Ingresos (fondos estudiantiles, aportes institucionales, auspicios, donaciones, venta de merchandising, etc.).
-    - Gastos (materiales, logística de eventos, infraestructura tecnológica, dominios, servicios, entre otros).
+  - Ingresos (fondos estudiantiles, aportes institucionales, auspicios, donaciones, venta de merchandising, etc.).
+  - Gastos (materiales, logística de eventos, infraestructura tecnológica, dominios, servicios, entre otros).
 - Elaborar y presentar, al menos una vez por semestre, un informe financiero sintetizado para la comunidad.
 - Proponer presupuestos para eventos, actividades y necesidades operativas.
 - Gestionar reembolsos y pagos, de acuerdo con las normas internas y, cuando corresponda, con las de la universidad u organismo que entregue financiamiento externo.
@@ -143,24 +148,27 @@ La Tesorería / Finanzas tiene por finalidad administrar de manera transparente 
 ### 4.3. Secretaría / Administración
 
 #### Propósito del cargo
+
 La Secretaría / Administración tiene por finalidad resguardar la memoria institucional de la comunidad, organizando la información relevante y garantizando la trazabilidad de acuerdos, procesos y decisiones.
 
 #### Responsabilidades principales
+
 - Redactar y conservar actas de las reuniones del Directorio y, cuando corresponda, de la Asamblea.
 - Mantener un registro actualizado de:
-    - Personas miembros activas de la comunidad (según los criterios definidos).
-    - Equipos y responsables de proyectos.
-    - Cargos vigentes y períodos de ejercicio.
+  - Personas miembros activas de la comunidad (según los criterios definidos).
+  - Equipos y responsables de proyectos.
+  - Cargos vigentes y períodos de ejercicio.
 - Administrar y actualizar:
-    - Reglamentos internos.
-    - Código de Conducta.
-    - Manuales de funcionamiento y documentos similares.
+  - Reglamentos internos.
+  - Código de Conducta.
+  - Manuales de funcionamiento y documentos similares.
 - Coordinar procesos internos de:
-    - Postulación y elección de cargos.
-    - Votaciones o consultas a la Asamblea.
-    - Facilitar el acceso a la documentación relevante mediante los canales oficiales de la comunidad (repositorios, almacenamiento en la nube, etc.).
+  - Postulación y elección de cargos.
+  - Votaciones o consultas a la Asamblea.
+  - Facilitar el acceso a la documentación relevante mediante los canales oficiales de la comunidad (repositorios, almacenamiento en la nube, etc.).
 
 #### Limitaciones y contrapesos
+
 - La Secretaría / Administración no define, por sí sola, el contenido de las políticas o acuerdos; su rol es documentar lo que se decide colectivamente y asegurar su accesibilidad.
 - Las actas y documentos fundamentales deberán estar disponibles para revisión por parte de las personas miembros, respetando los criterios de transparencia y protección de datos personales que la comunidad adopte.
 
@@ -177,10 +185,10 @@ La Presidencia / Coordinación Alumni tiene por finalidad gestionar y articular 
 - Mantener un registro actualizado de las personas alumni de la comunidad.
 - Facilitar canales de comunicación entre alumni y la comunidad activa de estudiantes.
 - Coordinar iniciativas que permitan a los alumni contribuir a la comunidad, tales como:
-    - Mentoría y orientación profesional.
-    - Charlas, talleres o sesiones de experiencia laboral.
-    - Apoyo técnico en proyectos.
-    - Conexiones con la industria y oportunidades laborales.
+  - Mentoría y orientación profesional.
+  - Charlas, talleres o sesiones de experiencia laboral.
+  - Apoyo técnico en proyectos.
+  - Conexiones con la industria y oportunidades laborales.
 - Organizar encuentros y actividades que fortalezcan el vínculo entre alumni y estudiantes.
 - Identificar y canalizar oportunidades de colaboración entre la comunidad alumni y Open Source eUC.
 - Reportar periódicamente al Directorio sobre el estado y actividades de la comunidad alumni.
@@ -188,8 +196,8 @@ La Presidencia / Coordinación Alumni tiene por finalidad gestionar y articular 
 #### Limitaciones y contrapesos
 
 - La Presidencia / Coordinación Alumni no puede, por sí sola:
-    - Establecer compromisos formales con entidades externas en nombre de Open Source eUC sin la aprobación del Directorio.
-    - Autorizar el uso de recursos de la comunidad para actividades alumni sin coordinación con Tesorería / Finanzas.
+  - Establecer compromisos formales con entidades externas en nombre de Open Source eUC sin la aprobación del Directorio.
+  - Autorizar el uso de recursos de la comunidad para actividades alumni sin coordinación con Tesorería / Finanzas.
 - Las decisiones que afecten significativamente a la comunidad de estudiantes deberán ser coordinadas con la Presidencia / Coordinación General y el Directorio.
 
 ---
@@ -211,23 +219,25 @@ Los roles operativos son:
 ### 6.1. Encargado/a de Eventos, Comunicaciones y Marketing
 
 #### Propósito del rol
+
 Planificar, coordinar y difundir las actividades de Open Source eUC, fortaleciendo su presencia tanto en espacios presenciales como digitales.
 
 #### Responsabilidades principales
 
 - Diseñar, en coordinación con el Directorio, el calendario de eventos de la comunidad (talleres, charlas, hackathons, encuentros sociales u otros).
 - Coordinar la logística básica de las actividades:
-    - Reserva de salas y espacios físicos.
-    - Coordinación de horarios, enlaces de reunión en línea y requerimientos técnicos mínimos.
+  - Reserva de salas y espacios físicos.
+  - Coordinación de horarios, enlaces de reunión en línea y requerimientos técnicos mínimos.
 - Gestionar las comunicaciones externas e internas:
-    - Publicación de actividades en redes sociales y demás canales oficiales.
-    - Difusión de convocatorias, novedades y logros de la comunidad.
+  - Publicación de actividades en redes sociales y demás canales oficiales.
+  - Difusión de convocatorias, novedades y logros de la comunidad.
 - Contribuir al mantenimiento de una identidad visual coherente:
-    - Uso del logotipo y paleta de colores definidos.
-    - Uso de plantillas para presentaciones, afiches y publicaciones.
+  - Uso del logotipo y paleta de colores definidos.
+  - Uso de plantillas para presentaciones, afiches y publicaciones.
 - Recopilar y sistematizar retroalimentación de las actividades para mejorar su diseño y ejecución futura.
 
 #### Limitaciones y contrapesos
+
 - No puede emitir, por sí sola, comunicados que alteren políticas, posiciones oficiales o documentos fundamentales de la comunidad sin la validación del Directorio.
 - En temas sensibles (por ejemplo, conflictos internos, comunicaciones asociadas a la aplicación del Código de Conducta u otros asuntos delicados), deberá coordinarse de forma especial con el Directorio y con el Encargado/a de Comunidad e Inclusión.
 
@@ -236,23 +246,26 @@ Planificar, coordinar y difundir las actividades de Open Source eUC, fortalecien
 ### 6.2. Encargado/a de Proyectos / Tech
 
 #### Propósito del rol
+
 Facilitar el desarrollo, mantenimiento y sostenibilidad de los proyectos técnicos y repositorios de la comunidad, promoviendo buenas prácticas de contribución en software libre y de código abierto.
 
 #### Responsabilidades principales
+
 - Administrar la organización en la plataforma de control de versiones utilizada por la comunidad (por ejemplo, GitHub), en coordinación con el Directorio.
 - Definir y mantener:
-    - Guías de contribución (CONTRIBUTING, templates de issues y pull requests, etc.).
-    - Estándares mínimos de calidad, revisión de código y etiquetado de tareas.
+  - Guías de contribución (CONTRIBUTING, templates de issues y pull requests, etc.).
+  - Estándares mínimos de calidad, revisión de código y etiquetado de tareas.
 - Apoyar la creación y el lanzamiento de nuevos proyectos comunitarios:
-    - Configuración inicial de repositorios.
-    - Definición de tareas iniciales y etiquetado de “buenas primeras contribuciones”.
+  - Configuración inicial de repositorios.
+  - Definición de tareas iniciales y etiquetado de “buenas primeras contribuciones”.
 - Promover instancias técnicas:
-    - Sesiones de codificación conjunta.
-    - Jornadas de revisión de issues.
-    - Actividades de onboarding técnico para personas nuevas.
+  - Sesiones de codificación conjunta.
+  - Jornadas de revisión de issues.
+  - Actividades de onboarding técnico para personas nuevas.
 - Velar por el alineamiento de los proyectos con los principios de la comunidad y con las políticas de licenciamiento que esta defina.
 
 #### Limitaciones y contrapesos
+
 - La administración técnica de la organización no deberá estar concentrada en una sola persona. Al menos una persona adicional (por ejemplo, de Presidencia / Coordinación General) deberá contar con permisos suficientes para garantizar la continuidad de los proyectos.
 - No se podrán eliminar, archivar ni modificar licencias de proyectos comunitarios sin conocimiento y acuerdo del Directorio, de acuerdo con los mecanismos definidos.
 
@@ -261,21 +274,24 @@ Facilitar el desarrollo, mantenimiento y sostenibilidad de los proyectos técnic
 ### 6.3. Encargado/a de Comunidad e Inclusión
 
 #### Propósito del rol
+
 Cuidar el clima humano de la comunidad, fomentando la participación segura, respetuosa e inclusiva, y apoyando la aplicación del Código de Conducta.
 
 #### Responsabilidades principales
+
 - Actuar como punto de contacto inicial para:
-    - Consultas o preocupaciones relacionadas con el ambiente de la comunidad.
-    - Situaciones que puedan constituir incumplimientos del Código de Conducta.
-    - Facilitar procesos de diálogo y mediación cuando se presenten conflictos entre personas miembros, buscando soluciones respetuosas y acordes a los principios de la comunidad.
-    - Colaborar con el Directorio en la aplicación de medidas cuando se identifiquen vulneraciones al Código de Conducta, siguiendo los procedimientos definidos.
+  - Consultas o preocupaciones relacionadas con el ambiente de la comunidad.
+  - Situaciones que puedan constituir incumplimientos del Código de Conducta.
+  - Facilitar procesos de diálogo y mediación cuando se presenten conflictos entre personas miembros, buscando soluciones respetuosas y acordes a los principios de la comunidad.
+  - Colaborar con el Directorio en la aplicación de medidas cuando se identifiquen vulneraciones al Código de Conducta, siguiendo los procedimientos definidos.
 - Proponer y apoyar actividades que:
-    - Promuevan la inclusión de personas de diversos contextos y niveles de experiencia.
-    - Faciliten la integración de personas nuevas a la comunidad.
-    - Contribuyan al bienestar general de quienes participan en Open Source eUC.
+  - Promuevan la inclusión de personas de diversos contextos y niveles de experiencia.
+  - Faciliten la integración de personas nuevas a la comunidad.
+  - Contribuyan al bienestar general de quienes participan en Open Source eUC.
 - Trabajar coordinadamente con el rol de Eventos, Comunicaciones y Marketing para asegurar que los mensajes, imágenes y dinámicas asociadas a la comunidad sean coherentes con los principios de inclusión y respeto.
 
 #### Limitaciones y contrapesos
+
 - El Encargado/a de Comunidad e Inclusión no impondrá sanciones de forma unilateral. En caso de ser necesario adoptar medidas formales, estas deberán ser acordadas con el Directorio y seguir los procedimientos establecidos en el Código de Conducta u otros documentos pertinentes.
 - La información sensible compartida en el contexto de este rol deberá tratarse con confidencialidad y cuidado, respetando la privacidad de las personas involucradas, dentro de los márgenes permitidos por los procedimientos comunitarios.
 
