@@ -3,6 +3,11 @@ title: "Código de Conducta"
 description: "Código de Conducta convenido para Contribuyentes de Open Source UC"
 ---
 
+> ⚠️ **Aviso**
+>
+> Este documento actualmente se encuentra en desarrollo, no es el documento final.
+> Cualquier sugerencia se puede hacer a **<comunidad@ousc.dev>**, **<contacto@osuc.dev>** o hablando con algun coordinador.
+
 ## Código de Conducta de Open Source eUC
 
 > ⚠️ **TL;DR**
@@ -12,8 +17,9 @@ description: "Código de Conducta convenido para Contribuyentes de Open Source U
 > Queremos que nuestras actividades —presenciales y online— sean seguras, respetuosas e inclusivas.  
 >
 > Si eres víctima o presenciaste un incidente dentro de la comunidad (en GitHub, Discord, redes sociales, charlas, talleres, juntas, etc.), puedes denunciar y conseguir apoyo contactando al equipo de coordinación de la comunidad:
-> - Al/a la Coordinador/a de Comunidad e Inclusión: **comunidad@osuc.dev**
-> - O al correo general de coordinación: **contacto@osuc.dev**
+>
+> - Al/a la Coordinador/a de Comunidad e Inclusión: **<comunidad@osuc.dev>**
+> - O al correo general de coordinación: **<contacto@osuc.dev>**
 
 ---
 
@@ -125,9 +131,9 @@ Los administradores de la comunidad tendrán el derecho y la responsabilidad de 
 Si eres víctima o testigo de un comportamiento abusivo, acosador o inaceptable, o si tienes dudas sobre si una situación constituye una vulneración a este Código de Conducta, puedes:
 
 - Escribir al **correo general de comunidad e inclusion de Open Source eUC**:  
-  - comunidad@osuc.dev.
+  - <comunidad@osuc.dev>.
 - Escribir al **correo general de coordinación de Open Source eUC**:
-  - contacto@osuc.dev.
+  - <contacto@osuc.dev>.
 - Acercarte a cualquier miembro del equipo organizador durante un evento presencial, quien deberá canalizar el reporte hacia las personas responsables.  
 
 Todos los reportes serán **evaluados e investigados** de manera puntual y justa.  
