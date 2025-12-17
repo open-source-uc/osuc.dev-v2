@@ -21,7 +21,7 @@ const {
 ---
 
 <article
-    class={`group relative bg-background/60 h-64 overflow-hidden rounded-2xl border border-foreground/10 hover:border-primary/30 transition-colors group ${className}`}
+    class={`group relative bg-background/60 h-64 overflow-hidden rounded-2xl border border-foreground/10 hover:border-primary/30 transition-colors duration-300 ease-in-out group transform-gpu ${className}`}
 >
     <!-- Imagen del Social Preview - lado derecho -->
     <div
@@ -30,7 +30,7 @@ const {
         <img
             src={openGraphImageUrl}
             alt={name}
-            class="w-full h-full object-cover blur-2xl brightness-50 group-hover:blur-xs transition-all duration-75"
+            class="w-full h-full object-cover blur-2xl brightness-50 group-hover:blur-xs transition-all duration-200 ease-in-out"
         />
     </div>
 
