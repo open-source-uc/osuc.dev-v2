@@ -123,6 +123,8 @@ La Presidencia / Coordinación General tiene por finalidad articular el funciona
 
 La Tesorería / Finanzas tiene por finalidad administrar de manera transparente y responsable los recursos económicos de la comunidad, asegurando su correcta rendición y uso en beneficio de las actividades de Open Source eUC.
 
+Este cargo se reporta directamente a la Presidencia / Coordinación Alumni en materias financieras y debe solicitar fondos y rendir gastos a dicha instancia.
+
 #### Responsabilidades principales
 
 - Llevar un registro actualizado de:
@@ -132,11 +134,29 @@ La Tesorería / Finanzas tiene por finalidad administrar de manera transparente 
 - Proponer presupuestos para eventos, actividades y necesidades operativas.
 - Gestionar reembolsos y pagos, de acuerdo con las normas internas y, cuando corresponda, con las de la universidad u organismo que entregue financiamiento externo.
 - Custodiar y archivar comprobantes y respaldos de operaciones.
+- **Solicitar fondos a Presidencia / Coordinación Alumni** cuando sea necesario realizar gastos operativos.
+- **Rendir gastos obligatoriamente** a Presidencia / Coordinación Alumni, presentando boletas, facturas u otros comprobantes válidos dentro del plazo establecido.
+- **Mantener actualizada la rendición de gastos**, entregando la documentación respaldatoria dentro de **3 días hábiles** desde la realización del gasto.
+
+#### Modelo de cuentas y tarjetas
+
+- La comunidad opera bajo un **modelo de dos tarjetas bancarias**:
+    - **Tarjeta Fuente:** Tarjeta principal vinculada a la cuenta bancaria de la Presidencia Alumni, usada para aprovisionar fondos.
+    - **Tarjeta Esclava:** Tarjeta operativa usada por Tesorería / Finanzas para realizar gastos autorizados.
+- Este modelo asegura separación de funciones y trazabilidad de los movimientos financieros.
 
 #### Limitaciones y contrapesos
 
 - La Tesorería / Finanzas no podrá ejecutar gastos por sobre el monto límite que se establezca sin la aprobación de, al menos, otra persona del Directorio.
 - El acceso efectivo a cuentas, fondos o plataformas de gestión económica deberá ser compartido entre, al menos, dos personas (por ejemplo, Tesorería y Presidencia / Coordinación General), para evitar la concentración de control en una sola persona.
+
+#### Sanciones por incumplimiento de rendición
+
+⚠️ **Sanción por falta de rendición:**
+
+- Si la persona a cargo de Tesorería / Finanzas **utiliza la tarjeta y no rinde la boleta o factura correspondiente dentro de 3 días hábiles**, será **destituida de su cargo de forma inmediata**.
+- En ese caso, se convocará a una **votación extraordinaria del Directorio** para designar a una nueva persona en el cargo de Tesorería / Finanzas.
+- Esta medida busca garantizar la transparencia, trazabilidad y responsabilidad en el manejo de los recursos comunitarios.
 
 ---
 
@@ -172,6 +192,8 @@ La Secretaría / Administración tiene por finalidad resguardar la memoria insti
 
 La Presidencia / Coordinación Alumni tiene por finalidad gestionar y articular la comunidad de alumni y ex-estudiantes de Open Source eUC, coordinando su participación activa para que puedan aportar —de cualquier forma— a la comunidad de estudiantes.
 
+Este cargo tiene la responsabilidad legal, financiera y administrativa de la estructura formal de la comunidad (SpA), siendo titular del 100% de las acciones de la sociedad.
+
 #### Responsabilidades principales
 
 - Mantener un registro actualizado de las personas alumni de la comunidad.
@@ -184,13 +206,31 @@ La Presidencia / Coordinación Alumni tiene por finalidad gestionar y articular 
 - Organizar encuentros y actividades que fortalezcan el vínculo entre alumni y estudiantes.
 - Identificar y canalizar oportunidades de colaboración entre la comunidad alumni y Open Source eUC.
 - Reportar periódicamente al Directorio sobre el estado y actividades de la comunidad alumni.
+- **Gestión legal y administrativa:**
+    - Ostentar la representación legal de la SpA y mantener al día toda la documentación societaria.
+    - Ser titular de la cuenta bancaria principal de la comunidad.
+    - Mantener el 100% de las acciones de la SpA en calidad de Presidencia Alumni.
+    - Supervisar las solicitudes de fondos realizadas por Tesorería / Finanzas.
+    - Aprobar las rendiciones de gastos presentadas por Tesorería / Finanzas.
+
+#### Requisitos para el cargo
+
+- Haber cumplido, al menos, **1 año como Alumni activo** en la comunidad.
+- Esta condición asegura conocimiento profundo de la comunidad y continuidad en la gestión administrativa y legal.
+
+#### Membresía de la comunidad Alumni
+
+- Los **miembros activos Alumni de este año** serán designados por la Coordinación General en conjunto con la Presidencia Alumni.
+- Se establecerá una **definición explícita de membresía activa** a inicios de 2027, en coordinación con el Directorio.
 
 #### Limitaciones y contrapesos
 
 - La Presidencia / Coordinación Alumni no puede, por sí sola:
     - Establecer compromisos formales con entidades externas en nombre de Open Source eUC sin la aprobación del Directorio.
     - Autorizar el uso de recursos de la comunidad para actividades alumni sin coordinación con Tesorería / Finanzas.
+    - Realizar gastos directos sin la rendición correspondiente por parte de Tesorería / Finanzas.
 - Las decisiones que afecten significativamente a la comunidad de estudiantes deberán ser coordinadas con la Presidencia / Coordinación General y el Directorio.
+- La titularidad de las acciones y la representación legal no eximen del cumplimiento de los procedimientos internos de toma de decisiones establecidos en este documento.
 
 ---
 
