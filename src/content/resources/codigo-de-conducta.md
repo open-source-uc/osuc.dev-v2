@@ -3,11 +3,6 @@ title: "Código de Conducta"
 description: "Código de Conducta convenido para Contribuyentes de Open Source UC"
 ---
 
-> ⚠️ **Aviso**
->
-> Este documento actualmente se encuentra en desarrollo, no es el documento final.
-> Cualquier sugerencia se puede hacer a **<comunidad@ousc.dev>**, **<contacto@osuc.dev>** o hablando con algun coordinador.
-
 ## Código de Conducta de Open Source eUC
 
 > ⚠️ **TL;DR**
