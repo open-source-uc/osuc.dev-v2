@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlockCode from "@/components/BlockCode.astro";
+import { getEntry, render } from "astro:content";
+
+const positionsAndCommunity = await getEntry("resources", "cargos-y-comunidad");
+
+if (!positionsAndCommunity) {
+    throw new Error("Cargos y comunidad no encontrado");
+}
+
+const components = {
+    code: BlockCode,
+};
+
+const { Content } = await render(positionsAndCommunity);
+---
+
+<Layout
+    title="Código de Conducta - Open Source UC"
+    description="Nuestro compromiso con una comunidad inclusiva y respetuosa."
+>
+    <main
+        class="bg-background flex justify-center px-10 lg:px-20 xl:px-50 text-foreground py-20"
+    >
+        <section class="max-w-3xl w-full markdown-content md:px-10">
+            <Content components={components} />
+        </section>
+    </main>
+</Layout>

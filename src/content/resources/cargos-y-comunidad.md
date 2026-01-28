@@ -1,5 +1,6 @@
 ---
 title: "Cargos y estructura comunitaria de Open Source eUC"
+id: "cargos-y-comunidad"
 description: "Estructura organizacional, cargos formales y roles operativos necesarios para mantener el funcionamiento de la comunidad"
 ---
 
