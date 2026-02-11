@@ -201,8 +201,6 @@ La Secretaría / Administración tiene por finalidad resguardar la memoria insti
 
 La Presidencia / Coordinación Alumni tiene por finalidad gestionar y articular la comunidad de alumni y ex-estudiantes de Open Source eUC, coordinando su participación activa para que puedan aportar —de cualquier forma— a la comunidad de estudiantes.
 
-Este cargo tiene la responsabilidad legal, financiera y administrativa de la estructura formal de la comunidad (SpA), siendo titular del 100% de las acciones de la sociedad.
-
 #### Responsabilidades principales
 
 - Mantener un registro actualizado de las personas alumni de la comunidad.
@@ -215,10 +213,8 @@ Este cargo tiene la responsabilidad legal, financiera y administrativa de la est
 - Organizar encuentros y actividades que fortalezcan el vínculo entre alumni y estudiantes.
 - Identificar y canalizar oportunidades de colaboración entre la comunidad alumni y Open Source eUC.
 - Reportar periódicamente al Directorio sobre el estado y actividades de la comunidad alumni.
-- **Gestión legal y administrativa:**
-    - Ostentar la representación legal de la SpA y mantener al día toda la documentación societaria.
+- **Gestión administrativa y financiera:**
     - Ser titular de la cuenta bancaria principal de la comunidad.
-    - Mantener el 100% de las acciones de la SpA en calidad de Presidencia Alumni.
     - Supervisar las solicitudes de fondos realizadas por Tesorería / Finanzas.
     - Aprobar las rendiciones de gastos presentadas por Tesorería / Finanzas.
 
@@ -239,7 +235,6 @@ Este cargo tiene la responsabilidad legal, financiera y administrativa de la est
   - Autorizar el uso de recursos de la comunidad para actividades alumni sin coordinación con Tesorería / Finanzas.
     - Realizar gastos directos sin la rendición correspondiente por parte de Tesorería / Finanzas.
 - Las decisiones que afecten significativamente a la comunidad de estudiantes deberán ser coordinadas con la Presidencia / Coordinación General y el Directorio.
-- La titularidad de las acciones y la representación legal no eximen del cumplimiento de los procedimientos internos de toma de decisiones establecidos en este documento.
 
 ---
 
