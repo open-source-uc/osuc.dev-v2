@@ -12,6 +12,7 @@
         "@fontsource-variable/funnel-display": "5.2.8",
         "@tailwindcss/vite": "4.1.17",
         "astro": "5.15.8",
-        "tailwindcss": "4.1.17"
+        "tailwindcss": "4.1.17",
+        "unist-util-visit": "5.1.0"
     }
 }
