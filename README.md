@@ -63,10 +63,10 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 
 | Comando              | Acción                                              |
 | :------------------- | :-------------------------------------------------- |
-| `npm install`       | Instala las dependencias                            |
-| `npm dev`          | Inicia servidor de desarrollo en `localhost:4321`   |
-| `npm build`        | Construye el sitio para producción en `./dist/`     |
-| `npm preview`      | Previsualiza el build localmente antes de desplegar |
+| `pnpm install`       | Instala las dependencias                            |
+| `pnpm dev`          | Inicia servidor de desarrollo en `localhost:4321`   |
+| `pnpm build`        | Construye el sitio para producción en `./dist/`     |
+| `pnpm preview`      | Previsualiza el build localmente antes de desplegar |
 
 ## ⚙️ Configuración
 
@@ -103,7 +103,7 @@ El sitio está desplegado en **Cloudflare Pages**.
 1. Conecta tu repositorio de GitHub a Cloudflare Pages
 2. Configura los siguientes parámetros:
    - **Framework preset**: Astro
-   - **Build command**: `npm run build`
+   - **Build command**: `pnpm run build`
    - **Build output directory**: `dist`
 3. Agrega las variables de entorno:
    - `GITHUB_TOKEN`: Tu token de GitHub con permisos de lectura
