@@ -4,6 +4,7 @@ import InstagramIcon from "@components/Icons/InstagramIcon.astro";
 import TelegramIcon from "@components/Icons/TelegramIcon.astro";
 import LinkedinIcon from "@components/Icons/LinkedinIcon.astro";
 import GitHubIcon from "@components/Icons/GitHubIcon.astro";
+import { SOCIAL_LINKS } from "@/data/social-links";
 
 interface Props {
     className?: string;
@@ -70,7 +71,7 @@ const { className = "" }: Props = Astro.props;
             <h3 class="font-bold text-base sm:text-lg mb-2">Social Media</h3>
             <div class="flex justify-center sm:justify-start gap-4 mt-2">
                 <a
-                    href="https://instagram.com/osuc.dev"
+                    href={SOCIAL_LINKS.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram Open Source UC"
@@ -79,7 +80,7 @@ const { className = "" }: Props = Astro.props;
                     <InstagramIcon size={24} />
                 </a>
                 <a
-                    href="https://t.me/+zQdotSmFEIRkMzcx"
+                    href={SOCIAL_LINKS.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Telegram Open Source UC"
@@ -88,7 +89,7 @@ const { className = "" }: Props = Astro.props;
                     <TelegramIcon size={24} />
                 </a>
                 <a
-                    href="https://www.linkedin.com/company/open-source-euc"
+                    href={SOCIAL_LINKS.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn Open Source UC"

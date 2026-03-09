@@ -8,6 +8,7 @@ import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
 import InstagramIcon from "@/components/Icons/InstagramIcon.astro";
 import IssueIcon from "@/components/Icons/IssueIcon.astro";
 import { getPinnedRepos } from "@/utils/github";
+import { SOCIAL_LINKS } from "@/data/social-links";
 
 const githubToken = import.meta.env.GITHUB_TOKEN;
 const orgName = "open-source-uc";
@@ -141,7 +142,7 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
             >
                 <LinkButton
                     text="Únete a nuestro Discord"
-                    href="https://discord.gg/jRdQCGn6yS"
+                    href={SOCIAL_LINKS.discord}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
                     ><DiscordIcon
@@ -151,7 +152,7 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
                 >
                 <LinkButton
                     text="Grupo de Telegram"
-                    href="https://t.me/+zQdotSmFEIRkMzcx"
+                    href={SOCIAL_LINKS.telegram}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
                     ><TelegramIcon
@@ -161,7 +162,7 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
                 >
                 <LinkButton
                     text="Síguenos en Instagram"
-                    href="#"
+                    href={SOCIAL_LINKS.instagram}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
                     ><InstagramIcon

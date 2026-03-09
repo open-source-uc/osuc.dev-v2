@@ -5,6 +5,7 @@ import InstagramIcon from "@/components/Icons/InstagramIcon.astro";
 import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
 import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
 import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
+import { SOCIAL_LINKS } from "@/data/social-links";
 ---
 
 <header
@@ -120,7 +121,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                 </h3>
                 <div class="flex gap-6">
                     <a
-                        href="https://instagram.com/osuc.dev"
+                        href={SOCIAL_LINKS.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram Open Source UC"
@@ -129,7 +130,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                         <InstagramIcon size={32} />
                     </a>
                     <a
-                        href="https://t.me/+zQdotSmFEIRkMzcx"
+                        href={SOCIAL_LINKS.telegram}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Telegram Open Source UC"
@@ -138,7 +139,7 @@ import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
                         <TelegramIcon size={32} />
                     </a>
                     <a
-                        href="https://discord.gg/jRdQCGn6yS"
+                        href={SOCIAL_LINKS.discord}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Discord Open Source UC"
