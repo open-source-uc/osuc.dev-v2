@@ -1,4 +1,34 @@
 [
+	{
+		"year": "2026-1",
+		"leaders": [
+			{
+				"name": "Pablo Cruzat",
+				"description": "Coordinador General",
+				"githubUser": "PabloCruzval"
+			},
+			{
+				"name": "Noemi Flores",
+				"description": "Secretaria / Coordinadora de Comunidad e Inclusión",
+				"githubUser": "soap-y"
+			},
+			{
+				"name": "Maximiliano Militzer",
+				"description": "Coordinador de Alumni",
+				"githubUser": "Dyotson"
+			},
+			{
+				"name": "Vicente Muñoz",
+				"description": "Tesorero / Coordinador de Eventos",
+				"githubUser": "utmite"
+			},
+			{
+				"name": "Victor Moreno",
+				"description": "Coordinador de Proyectos",
+				"githubUser": "viccmoor"
+			}
+		]
+	},
     {
         "year": "2025-2",
         "leaders": [
