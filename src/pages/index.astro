@@ -4,10 +4,11 @@ import BentoRepo from "@/components/BentoRepo.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
 import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
-import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
+import WhatsappIcon from "@/components/Icons/WhatsappIcon.astro";
 import InstagramIcon from "@/components/Icons/InstagramIcon.astro";
 import IssueIcon from "@/components/Icons/IssueIcon.astro";
 import { getPinnedRepos } from "@/utils/github";
+import { SOCIAL_LINKS } from "@/data/social-links";
 
 const githubToken = import.meta.env.GITHUB_TOKEN;
 const orgName = "open-source-uc";
@@ -141,7 +142,7 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
             >
                 <LinkButton
                     text="Únete a nuestro Discord"
-                    href="https://discord.gg/jRdQCGn6yS"
+                    href={SOCIAL_LINKS.discord}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
                     ><DiscordIcon
@@ -150,18 +151,18 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
                     /></LinkButton
                 >
                 <LinkButton
-                    text="Grupo de Telegram"
-                    href="https://t.me/+zQdotSmFEIRkMzcx"
+                    text="Grupo de Whatsapp"
+                    href={SOCIAL_LINKS.whatsapp}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
-                    ><TelegramIcon
+                    ><WhatsappIcon
                         size={20}
                         className="md:w-6 md:h-6"
                     /></LinkButton
                 >
                 <LinkButton
                     text="Síguenos en Instagram"
-                    href="#"
+                    href={SOCIAL_LINKS.instagram}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
                     ><InstagramIcon
