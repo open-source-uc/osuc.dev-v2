@@ -4,7 +4,7 @@ import BentoRepo from "@/components/BentoRepo.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
 import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
-import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
+import WhatsappIcon from "@/components/Icons/WhatsappIcon.astro";
 import InstagramIcon from "@/components/Icons/InstagramIcon.astro";
 import IssueIcon from "@/components/Icons/IssueIcon.astro";
 import { getPinnedRepos } from "@/utils/github";
@@ -151,11 +151,11 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
                     /></LinkButton
                 >
                 <LinkButton
-                    text="Grupo de Telegram"
-                    href={SOCIAL_LINKS.telegram}
+                    text="Grupo de Whatsapp"
+                    href={SOCIAL_LINKS.whatsapp}
                     className="flex items-center justify-center gap-2 md:gap-4"
                     type="secondary"
-                    ><TelegramIcon
+                    ><WhatsappIcon
                         size={20}
                         className="md:w-6 md:h-6"
                     /></LinkButton
