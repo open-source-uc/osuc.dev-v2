@@ -6,12 +6,43 @@ import TelegramIcon from "@/components/Icons/TelegramIcon.astro";
 import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
 import DiscordIcon from "@/components/Icons/DiscordIcon.astro";
 import { SOCIAL_LINKS } from "@/data/social-links";
+import { SITE_NOTICE } from "@/data/site-notice";
+
+const noticeToneClasses = {
+    info: "bg-primary/30 text-foreground border-b border-primary/50",
+    success: "bg-green-500/50 text-foreground border-b border-green-500/20",
+    warning: "bg-yellow-400/15 text-foreground border-b border-yellow-500/30",
+} as const;
+
+const noticeTone = SITE_NOTICE.tone ?? "info";
 ---
 
 <header
     class="sticky top-0 z-50 w-full bg-background text-foreground transition-all duration-200"
     id="nav-header"
 >
+    {
+        SITE_NOTICE.enabled && (
+            <div
+                class={`px-4 md:px-8 py-2 text-center text-xs md:text-sm ${noticeToneClasses[noticeTone]}`}
+            >
+                <p class="flex flex-wrap items-center justify-center gap-2">
+                    <span>{SITE_NOTICE.message}</span>
+                    {SITE_NOTICE.href && SITE_NOTICE.ctaLabel && (
+                        <a
+                            href={SITE_NOTICE.href}
+                            class="font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {SITE_NOTICE.ctaLabel}
+                        </a>
+                    )}
+                </p>
+            </div>
+        )
+    }
+
     <input
         type="checkbox"
         name="menu-toggle"
