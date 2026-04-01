@@ -9,7 +9,7 @@ export interface SiteNotice {
 }
 
 export const SITE_NOTICE: SiteNotice = {
-    enabled: true,
+    enabled: false,
     message: "Abrimos inscripciones, ¡no te quedes fuera!",
     href: "https://apply.osuc.dev",
     ctaLabel: "Inscribete aquí.",
