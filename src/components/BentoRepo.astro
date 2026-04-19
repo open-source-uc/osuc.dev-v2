@@ -68,12 +68,16 @@ homeUrl = homeUrl.length == 0 ? repoUrl : homeUrl;
       <a href={repoUrl} class="hover:text-white">
         <GitHubIcon size={22} />
       </a>
-      <a href={repoUrl}>
-        <div class="flex items-center gap-1 hover:text-white">
-          <StarIcon size={22} />
-          <span>{stargazerCount}</span>
-        </div>
-      </a>
+      {
+        stargazerCount > 0 && (
+          <a href={`${repoUrl}/stargazers`}>
+            <div class="flex items-center gap-1 hover:text-white">
+              <StarIcon size={22} />
+              <span>{stargazerCount}</span>
+            </div>
+          </a>
+        )
+      }
       {
         forkCount > 0 && (
           <a href={`${repoUrl}/forks`}>
