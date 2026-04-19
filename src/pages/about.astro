@@ -1,6 +1,12 @@
 ---
+import type { OldCoordData, CoordData } from "@/types/coords";
 import Layout from "@/layouts/Layout.astro";
 import coordsData from "@/data/coords.json";
+import oldCoordsData from "@/data/old_coords.json";
+import LeaderCard from "@/components/LeaderCard.astro";
+
+oldCoordsData as OldCoordData[];
+coordsData as CoordData[];
 ---
 
 <Layout
@@ -9,7 +15,7 @@ import coordsData from "@/data/coords.json";
 >
   <main class="flex w-full items-center justify-center px-4 sm:px-6">
     <section
-      class="text-foreground flex w-full max-w-3xl flex-col justify-center gap-5 pt-15 pb-10"
+      class="text-foreground flex w-full max-w-6xl flex-col justify-center gap-5 pt-15 pb-10"
     >
       <header class="flex flex-col gap-5">
         <h1 class="text-3xl font-bold sm:text-4xl">
@@ -77,6 +83,22 @@ import coordsData from "@/data/coords.json";
         </p>
       </section>
       <section
+        id="actual-coordinators"
+        aria-labelledby="actual-coordinators"
+        class="flex flex-col gap-8"
+      >
+        <h2 class="text-xl font-bold sm:text-2xl">Coordinación actual</h2>
+        <div
+          class="grid items-center justify-between py-10 md:grid-cols-2 xl:grid-cols-3"
+        >
+          {
+            coordsData[0].leaders.map((l) => (
+              <LeaderCard name={l.name} github={l.github} role={l.role} />
+            ))
+          }
+        </div>
+      </section>
+      <section
         aria-labelledby="coordinators-timeline"
         class="flex flex-col gap-5"
       >
@@ -90,48 +112,53 @@ import coordsData from "@/data/coords.json";
           >
           </div>
           {
-            coordsData.map((semester) => (
-              <article
-                id={"semester-" + semester.year}
-                class="flex flex-col gap-4 sm:gap-5"
-              >
-                <h3 class="text-primary text-lg font-bold sm:text-xl">
-                  <time datetime={semester.year}>{semester.year}</time>
-                </h3>
-                <ul class="flex list-none flex-col gap-6 sm:gap-10">
-                  {semester.leaders.map((leader) => {
-                    const { name, description, githubUser } = leader;
-                    return (
-                      <li class="flex items-start gap-4 sm:items-center sm:gap-6">
-                        <img
-                          src={`https://github.com/${githubUser}.png`}
-                          alt={`Foto de perfil de ${name}`}
-                          class="size-12 shrink-0 rounded-full sm:size-15"
-                          loading="lazy"
-                          width="60"
-                          height="60"
-                        />
-                        <div class="flex flex-col gap-1">
-                          <h4 class="text-sm font-bold sm:text-base">{name}</h4>
-                          <p class="text-foreground/80 text-xs sm:text-sm">
-                            {description}
-                          </p>
-                          <a
-                            href={`https://github.com/${githubUser}`}
-                            class="text-primary text-xs hover:underline sm:text-sm"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`Perfil de GitHub de ${name}`}
-                          >
-                            GitHub
-                          </a>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </article>
-            ))
+            oldCoordsData.map((semester, i) => {
+              if (i == 0) return;
+              return (
+                <article
+                  id={"semester-" + semester.year}
+                  class="flex flex-col gap-4 sm:gap-5"
+                >
+                  <h3 class="text-primary text-lg font-bold sm:text-xl">
+                    <time datetime={semester.year}>{semester.year}</time>
+                  </h3>
+                  <ul class="flex list-none flex-col gap-6 sm:gap-10">
+                    {semester.leaders.map((leader) => {
+                      const { name, description, githubUser } = leader;
+                      return (
+                        <li class="flex items-start gap-4 sm:items-center sm:gap-6">
+                          <img
+                            src={`https://github.com/${githubUser}.png`}
+                            alt={`Foto de perfil de ${name}`}
+                            class="size-12 shrink-0 rounded-full sm:size-15"
+                            loading="lazy"
+                            width="60"
+                            height="60"
+                          />
+                          <div class="flex flex-col gap-1">
+                            <h4 class="text-sm font-bold sm:text-base">
+                              {name}
+                            </h4>
+                            <p class="text-foreground/80 text-xs sm:text-sm">
+                              {description}
+                            </p>
+                            <a
+                              href={`https://github.com/${githubUser}`}
+                              class="text-primary text-xs hover:underline sm:text-sm"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`Perfil de GitHub de ${name}`}
+                            >
+                              GitHub
+                            </a>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </article>
+              );
+            })
           }
         </div>
       </section>

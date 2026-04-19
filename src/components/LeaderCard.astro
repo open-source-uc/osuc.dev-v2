@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: string;
+  github: string | null;
+  role: string;
+}
+
+const { name, github, role } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center gap-4 align-middle">
+  <img
+    src=`https://github.com/${github}.png`
+    alt=""
+    class="size-12 shrink-0 rounded-full sm:size-22"
+    loading="lazy"
+  />
+  <h3 class="text-2xl">{name}</h3>
+  <h4 class="text-xl">{role}</h4>
+</div>
