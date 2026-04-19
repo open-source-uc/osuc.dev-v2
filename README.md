@@ -1,115 +1,124 @@
-# Open Source UC - Website
+<h1 align="center">Open Source UC - Website</h1>
 
-Sitio web oficial de la comunidad Open Source UC, construido con Astro y Tailwind CSS.
+<p align="center">
+	Sitio web oficial de Open Source UC, construido con Astro y Tailwind CSS.
+</p>
 
-## 🚀 Estructura del Proyecto
+<div align="center">
 
-```text
-/
-├── public/              # Archivos estáticos (favicon, imágenes, etc.)
-├── src/
-│   ├── assets/         # Assets procesados por Astro
-│   ├── components/     # Componentes reutilizables
-│   │   ├── BentoRepo.astro       # Tarjeta de repositorio
-│   │   ├── LinkButton.astro      # Botón de enlace estilizado
-│   │   ├── Icons/                # Componentes de iconos SVG
-│   │   └── Layout/               
-│   │       └── Header.astro      # Header con menú responsive
-│   ├── content/        # Contenido del sitio
-│   │   ├── config.ts             # Configuración de colecciones
-│   │   └── resources/            # Páginas en markdown
-│   ├── layouts/        # Layouts base
-│   │   └── Layout.astro          # Layout principal
-│   ├── pages/          # Páginas del sitio (routing automático)
-│   │   ├── index.astro           # Página principal
-│   │   └── conduct.astro         # Código de conducta
-│   ├── styles/         # Estilos globales
-│   │   ├── bases.css             # Estilos base
-│   │   ├── global.css            # Estilos globales
-│   │   ├── markdown.css          # Estilos para markdown
-│   │   ├── themes.css            # Temas de color
-│   │   └── variables.css         # Variables CSS
-│   ├── types/          # Definiciones de TypeScript
-│   │   └── repos.ts              # Tipos para repositorios
-│   └── utils/          # Utilidades
-│       └── github.ts             # Integración con GitHub API
-└── astro.config.mjs    # Configuración de Astro
+
+![Astro](https://img.shields.io/badge/Astro-5.15.8-ff5d01?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.17-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-a3e635?style=for-the-badge)
+
+</div>
+
+---
+
+## 🚀 Instalación rápida
+
+### Requisitos
+
+- Node.js 20+
+- pnpm 10+
+
+### Setup
+
+1. Clona el repositorio:
+
+```bash
+git clone <URL_DEL_REPO>
+cd osuc.dev-v2
 ```
 
-## 🛠️ Tecnologías
+2. Instala dependencias:
 
-- **[Astro 5.15.8](https://astro.build)**: Framework web moderno para sitios estáticos
-- **[Tailwind CSS 4.1.17](https://tailwindcss.com)**: Framework de CSS utility-first
-- **[TypeScript](https://www.typescriptlang.org/)**: Tipado estático para JavaScript
-- **[GitHub GraphQL API](https://docs.github.com/en/graphql)**: Para obtener repositorios destacados
+```bash
+pnpm install
+```
 
-## 📦 Funcionalidades
-
-### Integración con GitHub
-
-El sitio obtiene automáticamente los repositorios destacados de la organización `open-source-uc` usando la API de GitHub. La implementación incluye:
-
-- **Caché en desarrollo**: Los datos se cachean por 30 minutos en `.astro/cache/github-repos.json` para optimizar las llamadas a la API durante el desarrollo
-- **GraphQL API**: Uso eficiente de la API con consultas específicas
-- **Variables de entorno**: Requiere `GITHUB_TOKEN` para autenticación
-
-### Contenido en Markdown
-
-Las páginas de contenido estático (como el código de conducta) están escritas en Markdown y procesadas automáticamente con estilos consistentes.
-
-## 🧞 Comandos
-
-Todos los comandos se ejecutan desde la raíz del proyecto:
-
-| Comando              | Acción                                              |
-| :------------------- | :-------------------------------------------------- |
-| `pnpm install`       | Instala las dependencias                            |
-| `pnpm dev`          | Inicia servidor de desarrollo en `localhost:4321`   |
-| `pnpm build`        | Construye el sitio para producción en `./dist/`     |
-| `pnpm preview`      | Previsualiza el build localmente antes de desplegar |
-
-## ⚙️ Configuración
-
-### Variables de Entorno
-
-Crea un archivo `.env` en la raíz del proyecto:
+3. Crea un archivo `.env` en la raíz:
 
 ```env
 GITHUB_TOKEN=tu_token_de_github
 ```
 
-El token debe tener permisos de lectura para repositorios públicos.
+4. Inicia el entorno de desarrollo:
 
-## 🎨 Sistema de Diseño
+```bash
+pnpm dev
+```
 
-El proyecto utiliza un sistema de colores definido en variables CSS:
+Disponible en: `http://localhost:4321`
 
-- `--background`: #1f1b19 (fondo oscuro)
-- `--foreground`: #E4E4E4 (texto principal)
-- `--primary`: #138DFF (azul principal)
-- `--secondary`: #B39CD0 (morado)
-- `--subtle`: #FFC1CC (rosa suave)
+---
 
-### Nuevo Componente
+## 🧞 Comandos
 
-Los componentes Astro van en `src/components/` y pueden usar TypeScript y JSX-like syntax con estilos de Tailwind.
+Todos los comandos se ejecutan desde la raíz del proyecto:
+
+| Comando | Acción |
+| :-- | :-- |
+| `pnpm install` | Instala dependencias |
+| `pnpm dev` | Inicia servidor local en `localhost:4321` |
+| `pnpm build` | Construye el sitio para producción en `./dist/` |
+| `pnpm preview` | Previsualiza el build localmente |
+
+## ✨ Características
+
+- Integración con GitHub GraphQL API para repositorios destacados
+- Caché en desarrollo para evitar llamadas repetidas
+- Contenido en Markdown con estilos consistentes
+- Arquitectura modular con componentes Astro reutilizables
+- Preparado para despliegue continuo en Cloudflare Pages
+
+## 🛠️ Stack
+
+- [Astro](https://astro.build)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org/)
+- [GitHub GraphQL API](https://docs.github.com/en/graphql)
+
+## ⚙️ Configuración
+
+### Variables de entorno
+
+- `GITHUB_TOKEN`: token de GitHub con permisos de lectura para repositorios públicos
+
+### Integración con GitHub
+
+El sitio consume repositorios de `open-source-uc` y, en desarrollo, guarda caché por 30 minutos en `.astro/cache/github-repos.json`.
+
+## 🧱 Estructura del proyecto
+
+```text
+/
+├── public/           # Archivos estáticos
+├── src/
+│   ├── components/   # UI reutilizable (incluye Icons y Layout)
+│   ├── content/      # Markdown y configuración de colecciones
+│   ├── data/         # Datos del sitio
+│   ├── pages/        # Rutas del sitio
+│   ├── styles/       # Estilos globales y temas
+│   └── utils/        # Integraciones (ej: GitHub API)
+├── astro.config.mjs
+└── package.json
+```
 
 ## 🚀 Despliegue
 
-El sitio está desplegado en **Cloudflare Pages**.
+Este sitio está preparado para Cloudflare Pages.
 
-### Configuración en Cloudflare Pages
+Configuración recomendada:
 
-1. Conecta tu repositorio de GitHub a Cloudflare Pages
-2. Configura los siguientes parámetros:
-   - **Framework preset**: Astro
-   - **Build command**: `pnpm run build`
-   - **Build output directory**: `dist`
-3. Agrega las variables de entorno:
-   - `GITHUB_TOKEN`: Tu token de GitHub con permisos de lectura
+- Framework preset: `Astro`
+- Build command: `pnpm build`
+- Build output directory: `dist`
+- Variable de entorno: `GITHUB_TOKEN`
 
-Cloudflare Pages detectará automáticamente los cambios en la rama principal y desplegará la nueva versión.
+---
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo licencia MIT. Revisa [LICENSE](LICENSE) para más detalles.
