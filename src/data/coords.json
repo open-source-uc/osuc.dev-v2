@@ -1,43 +1,444 @@
 [
-  {
-    "semester": "2026-1",
-    "leaders": [
-      {
-        "name": "Pablo Cruzat",
-        "role": "Coordinador General",
-        "description": "Estudiante en Ciencia de la Computación",
-        "github": "PabloCruzval",
-        "linkedin": null,
-        "instagram": null
-      },
-      {
-        "name": "Noemi Flores",
-        "role": "Comunidad e Inlusión",
-        "github": "soap-y",
-        "linkedin": null,
-        "instagram": null
-      },
-      {
-        "name": "Maximiliano Militzer",
-        "role": "Coordinador de Alumni",
-        "github": "Dyotson",
-        "linkedin": null,
-        "instagram": null
-      },
-      {
-        "name": "Vicente Muñoz",
-        "role": "Tesorero",
-        "github": "utmite",
-        "linkedin": null,
-        "instagram": null
-      },
-      {
-        "name": "Victor Moreno",
-        "role": "Coordinador de Proyectos",
-        "github": "viccmoor",
-        "linkedin": null,
-        "instagram": null
-      }
-    ]
-  }
+    {
+        "year": "2026-1",
+        "leaders": [
+            {
+                "name": "Pablo Cruzat",
+                "role": "General",
+                "description": "Estudiante de Ciencia de la Computación, amante del mundo de Linux y el Open Source.",
+                "github": "PabloCruzval",
+                "linkedin": "https://www.linkedin.com/in/pablocruzval/",
+                "instagram": null
+            },
+            {
+                "name": "Noemi Flores",
+                "role": "Comunidad e Inlusión",
+                "description": "Estudiante de Ciencia de la Computación",
+                "github": "soap-y",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Maximiliano Militzer",
+                "role": "Alumni",
+                "description": "",
+                "github": "Dyotson",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Vicente Muñoz",
+                "role": "Tesorero",
+                "description": "Estudiante de Ciencia de Datos",
+                "github": "utmite",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Victor Moreno",
+                "role": "Proyectos",
+                "description": "Estudiante de Ciencia de la Computación",
+                "github": "viccmoor",
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2025-2",
+        "leaders": [
+            {
+                "name": "Vicente Muñoz",
+                "role": "Presidente",
+                "description": "Presidente",
+                "github": "utmite",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Ignacio Palma",
+                "role": "Secretario General",
+                "description": "Secretario General",
+                "github": "IgnacioPalma",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Noemi Flores",
+                "role": "Coordinadora de Comunidad e Inclusión",
+                "description": "Coordinadora de Comunidad e Inclusión",
+                "github": "soap-y",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Vicente Cuitiño",
+                "role": "Coordinador de Relaciones Exteriores",
+                "description": "Coordinador de Relaciones Exteriores",
+                "github": "MangoFrapuccino",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Pablo Cruzat",
+                "role": "Coordinador de Proyectos",
+                "description": "Coordinador de Proyectos",
+                "github": "PabloCruzval",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Nicolás Cruzat",
+                "role": "Coordinador de Diseño",
+                "description": "Coordinador de Diseño",
+                "github": "nicru",
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2025-1",
+        "leaders": [
+            {
+                "name": "Vicente Muñoz",
+                "role": "General",
+                "description": "General",
+                "github": "utmite",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "José Pedro Barraza",
+                "role": "Proyectos",
+                "description": "Proyectos",
+                "github": "ElZapallo432",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Ignacio Palma",
+                "role": "Comunidad e Inlusión",
+                "description": "Comunidad e Inlusión",
+                "github": "IgnacioPalma",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Vicente Cuitiño",
+                "role": "Externo",
+                "description": "Externo",
+                "github": "MangoFrapuccino",
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2024-2",
+        "leaders": [
+            {
+                "name": "Vicente Muñoz",
+                "role": "General",
+                "description": "General",
+                "github": "utmite",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Fabián Mendoza",
+                "role": "Externo",
+                "description": "Externo",
+                "github": "FabianMF1",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Vicencio",
+                "role": "Interno",
+                "description": "Interno",
+                "github": "vicenciomf2",
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2024-1",
+        "leaders": [
+            {
+                "name": "Fabián Mendoza",
+                "role": "General",
+                "description": "General",
+                "github": "FabianMF1",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Emmanuel Norambuena",
+                "role": "General (Ret)",
+                "description": "General (Ret)",
+                "github": "eanorambuena",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Matías Fernández",
+                "role": "Comunidad",
+                "description": "Comunidad",
+                "github": "Wh4rp",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Nicolás Cruzat",
+                "role": "Marketing y Diseño",
+                "description": "Marketing y Diseño",
+                "github": "nicru",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Xavier Morales",
+                "role": "Educación y Vinculación con el Medio",
+                "description": "Educación y Vinculación con el Medio",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Amelia Fernández",
+                "role": "Educación y Vinculación con el Medio",
+                "description": "Educación y Vinculación con el Medio",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2023-2",
+        "leaders": [
+            {
+                "name": "Emmanuel Norambuena",
+                "role": "General",
+                "description": "General",
+                "github": "eanorambuena",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Fabián Mendoza",
+                "role": "General",
+                "description": "General",
+                "github": "FabianMF1",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Matías Fernández",
+                "role": "Proyectos",
+                "description": "Proyectos",
+                "github": "Wh4rp",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Benjamín Ubilla",
+                "role": "Comunidad y Educación",
+                "description": "Comunidad y Educación",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Josefa Fernández",
+                "role": "Diseño",
+                "description": "Diseño",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2023-1",
+        "leaders": [
+            {
+                "name": "Benjamín Vicente",
+                "role": "General",
+                "description": "General",
+                "github": "benjavicente",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Lucas Natero",
+                "role": "Externo y Diseño",
+                "description": "Externo y Diseño",
+                "github": "lnatero",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Diego Costa",
+                "role": "Comunidad",
+                "description": "Comunidad",
+                "github": "diegocostares",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Emmanuel Norambuena",
+                "role": "Educación",
+                "description": "Educación",
+                "github": "eanorambuena",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Enzo Morata",
+                "role": "Proyectos (Ret)",
+                "description": "Proyectos (Ret)",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2022-2",
+        "leaders": [
+            {
+                "name": "Maximiliano Militzer",
+                "role": "General (Ret)",
+                "description": "General (Ret)",
+                "github": "Dyotson",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Benjamín Vicente",
+                "role": "Proyectos",
+                "description": "Proyectos",
+                "github": "benjavicente",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Fernando Smith",
+                "role": "Educación",
+                "description": "Educación",
+                "github": "FernandoSmith",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Lucas Natero",
+                "role": "Externo y Diseño",
+                "description": "Externo y Diseño",
+                "github": "lnatero",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Diego Costa",
+                "role": "Comunidad",
+                "description": "Comunidad",
+                "github": "diegocostares",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Agustín Covarrubias",
+                "role": "Comodín",
+                "description": "Comodín",
+                "github": "agucova",
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2022-1",
+        "leaders": [
+            {
+                "name": "Lucas Natero",
+                "role": "Administrativo",
+                "description": "Administrativo",
+                "github": "lnatero",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Fernando Smith",
+                "role": "Administrativo, técnico",
+                "description": "Administrativo, técnico",
+                "github": "FernandoSmith",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Caua Paz",
+                "role": "Técnico, asiste en forma online (Ret)",
+                "description": "Técnico, asiste en forma online (Ret)",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Benjamín Vicente",
+                "role": "Administrativo, Técnico, Social",
+                "description": "Administrativo, Técnico, Social",
+                "github": "benjavicente",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Nicolás Berrios",
+                "role": "Administrativo, Social",
+                "description": "Administrativo, Social",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Alister Mac Cormack",
+                "role": "Administrativo, Técnico, Social",
+                "description": "Administrativo, Técnico, Social",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    },
+    {
+        "year": "2021-2",
+        "leaders": [
+            {
+                "name": "Agustín Covarrubias",
+                "role": "Cargo de confianza",
+                "description": "Cargo de confianza",
+                "github": "agucova",
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Gabriel Faúndez",
+                "role": "Cargo de confianza",
+                "description": "Cargo de confianza",
+                "github": null,
+                "linkedin": null,
+                "instagram": null
+            },
+            {
+                "name": "Benjamín Vicente",
+                "role": "Facilitador y Cargo de confianza",
+                "description": "Facilitador y Cargo de confianza",
+                "github": "benjavicente",
+                "linkedin": null,
+                "instagram": null
+            }
+        ]
+    }
 ]

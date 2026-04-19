@@ -15,10 +15,17 @@ const noticeToneClasses = {
 } as const;
 
 const noticeTone = SITE_NOTICE.tone ?? "info";
+
+const navLinks = [
+  { text: "Inicio", link: "/" },
+  { text: "Proyectos", link: "/#projects" },
+  { text: "Nosotros", link: "/about" },
+  { text: "Código de conducta", link: "/conduct" },
+];
 ---
 
 <header
-  class="bg-background text-foreground sticky top-0 z-50 w-full transition-all duration-200"
+  class="bg-background text-foreground sticky top-0 z-50 w-full shadow-xl transition-all duration-200"
   id="nav-header"
 >
   {
@@ -56,19 +63,43 @@ const noticeTone = SITE_NOTICE.tone ?? "info";
       class="flex items-center gap-2 align-middle text-xl font-bold md:gap-4 md:text-2xl"
     >
       <OsucIcon size={32} className="md:h-10 md:w-10" />
-      <h1 class="hidden sm:block">Open Source UC</h1>
+      <h1 class="hidden sm:block">OSUC</h1>
     </a>
 
     <nav class="hidden md:block">
-      <ul class="flex items-center gap-8 [&>li]:text-lg">
-        <li>
-          <a href="/about" class="hover:underline">About US</a>
-        </li>
-        <li>
-          <a href="/#projects" class="hover:underline">Projects</a>
-        </li>
+      <ul class="flex items-center gap-4 xl:gap-8 [&>li]:text-lg">
+        {
+          navLinks.map((e) => (
+            <li>
+              <a href={e.link} class="hover:underline">
+                {e.text}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
+
+    <div class="hidden gap-4 align-middle md:flex">
+      <a
+        href={SOCIAL_LINKS.discord}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Discord Open Source UC"
+        class="transition-colors hover:text-[#5865F2]"
+      >
+        <DiscordIcon size={26} />
+      </a>
+      <a
+        href="https://github.com/open-source-uc"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub Open Source UC"
+        class="transition-colors hover:text-[#181717]"
+      >
+        <GitHubIcon size={26} />
+      </a>
+    </div>
 
     <label
       for="menu-toggle"
@@ -114,29 +145,18 @@ const noticeTone = SITE_NOTICE.tone ?? "info";
 
         <!-- Links de navegación -->
         <ul class="flex flex-col gap-6 text-2xl">
-          <li>
-            <a href="/" class="hover:text-primary block transition-colors"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a href="/about" class="hover:text-primary block transition-colors"
-              >About US</a
-            >
-          </li>
-          <li>
-            <a
-              href="/#projects"
-              class="hover:text-primary block transition-colors">Projects</a
-            >
-          </li>
-          <li>
-            <a
-              href="/conduct"
-              class="hover:text-primary block transition-colors"
-              >Code of Conduct</a
-            >
-          </li>
+          {
+            navLinks.map((e) => (
+              <li>
+                <a
+                  href={e.link}
+                  class="hover:text-primary block transition-colors"
+                >
+                  {e.text}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
 

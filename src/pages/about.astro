@@ -1,33 +1,86 @@
 ---
-import type { OldCoordData, CoordData } from "@/types/coords";
+import type { OldCoordData } from "@/types/coords";
 import Layout from "@/layouts/Layout.astro";
 import coordsData from "@/data/coords.json";
-import oldCoordsData from "@/data/old_coords.json";
 import LeaderCard from "@/components/LeaderCard.astro";
 
-oldCoordsData as OldCoordData[];
-coordsData as CoordData[];
+const coords = coordsData as unknown as OldCoordData[];
 ---
 
 <Layout
   title="Sobre Open Source UC"
   description="Conoce más sobre Open Source UC, una iniciativa estudiantil de innovación tecnológica en la Pontificia Universidad Católica de Chile."
 >
-  <main class="flex w-full items-center justify-center px-4 sm:px-6">
+  <main
+    class="text-foreground relative flex w-full flex-col items-center justify-center px-4 sm:px-6"
+  >
+    <section
+      class="relative grid h-[70vh] w-screen max-w-full items-center justify-center"
+    >
+      <div
+        class="from-primary to-primary/10 absolute -top-3/4 left-1/2 z-10 h-[110vh] w-[135vh] max-w-full -translate-x-1/2 rounded-full bg-radial blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <h2 class="z-30 text-2xl font-bold md:text-4xl">
+        About Open Source <span class="text-primary">eUC</span>
+      </h2>
+    </section>
+    <section
+      class="grid p-10 md:p-20 xl:grid-cols-2"
+      aria-labelledby="mission y vision"
+    >
+      <section aria-labelledby="mission" class="flex flex-col gap-5 p-5">
+        <h2 id="mission" class="text-xl font-bold md:text-4xl">
+          Nuestra Misión
+        </h2>
+        <p class="text-md md:text-xl">
+          Nuestra misión es potenciar a la comunidad estudiantil a través del
+          aprendizaje técnico colaborativo, construyendo juntos proyectos open
+          source que resuelvan problemas reales.
+        </p>
+      </section>
+      <section aria-labelledby="vision" class="flex flex-col gap-5 p-5">
+        <h2 id="vision" class="text-xl font-bold md:text-right md:text-4xl">
+          Nuestra Visión
+        </h2>
+        <p class="text-md md:text-right md:text-xl">
+          Aspiramos a ser la comunidad de referencia en innovación tecnológica
+          estudiantil, donde cada miembro pueda crecer, colaborar y dejar una
+          huella significativa en la comunidad.
+        </p>
+      </section>
+    </section>
+    <section class="flex w-full flex-col gap-4 p-5 md:p-10" id="actual-coord">
+      <h2 class="text-center text-xl font-bold md:text-4xl">
+        Coordinación actual
+      </h2>
+      <p class="px-10 text-center md:text-xl">
+        Si quieres revisar el organigrama, puedes hacerlo <a
+          href="/org-chart"
+          class="text-primary hover:underline">aquí</a
+        >.
+      </p>
+      <div
+        class="grid items-center justify-between py-10 md:grid-cols-2 md:p-10 xl:grid-cols-3"
+      >
+        {
+          coords[0].leaders.map((l) => (
+            <LeaderCard
+              name={l.name}
+              role={l.role}
+              description={l.description}
+              github={l.github}
+              linkedin={l.linkedin}
+              instagram={l.instagram}
+            />
+          ))
+        }
+      </div>
+    </section>
     <section
       class="text-foreground flex w-full max-w-6xl flex-col justify-center gap-5 pt-15 pb-10"
     >
-      <header class="flex flex-col gap-5">
-        <h1 class="text-3xl font-bold sm:text-4xl">
-          Sobre Open Source UC<span class="text-primary">.</span>
-        </h1>
-        <p class="text-sm sm:text-base">
-          Open Source UC es una iniciativa estudiantil de innovación tecnológica
-          que impulsa a estudiantes a colaborar y crecer profesionalmente a
-          través de la filosofía open-source en la Pontificia Universidad
-          Católica de Chile.
-        </p>
-      </header>
       <section aria-labelledby="why-we-exist" class="flex flex-col gap-5">
         <h2 id="why-we-exist" class="text-xl font-bold sm:text-2xl">
           ¿Por qué existimos?
@@ -66,37 +119,11 @@ coordsData as CoordData[];
           comunidad que conocemos ahora.
         </p>
       </section>
-      <section aria-labelledby="organization-chart" class="flex flex-col gap-5">
-        <!-- Ref a content/resources/cargos-y-comunidad -->
-        <h2 id="organization-chart" class="text-xl font-bold sm:text-2xl">
-          Estructura Organizacional
-        </h2>
-        <p class="text-sm sm:text-base">
-          Open Source UC se organiza de forma democrática y colaborativa, con
-          una Asamblea de miembros, un Directorio que coordina la gestión, y
-          roles operativos para eventos, proyectos y comunidad. Para conocer en
-          detalle los cargos y responsabilidades, visita nuestra <a
-            href="/org-chart"
-            class="text-primary hover:underline"
-            >página de estructura comunitaria</a
-          >.
-        </p>
-      </section>
       <section
         id="actual-coordinators"
         aria-labelledby="actual-coordinators"
         class="flex flex-col gap-8"
       >
-        <h2 class="text-xl font-bold sm:text-2xl">Coordinación actual</h2>
-        <div
-          class="grid items-center justify-between py-10 md:grid-cols-2 xl:grid-cols-3"
-        >
-          {
-            coordsData[0].leaders.map((l) => (
-              <LeaderCard name={l.name} github={l.github} role={l.role} />
-            ))
-          }
-        </div>
       </section>
       <section
         aria-labelledby="coordinators-timeline"
@@ -112,8 +139,7 @@ coordsData as CoordData[];
           >
           </div>
           {
-            oldCoordsData.map((semester, i) => {
-              if (i == 0) return;
+            coords.slice(1).map((semester) => {
               return (
                 <article
                   id={"semester-" + semester.year}
@@ -124,17 +150,29 @@ coordsData as CoordData[];
                   </h3>
                   <ul class="flex list-none flex-col gap-6 sm:gap-10">
                     {semester.leaders.map((leader) => {
-                      const { name, description, githubUser } = leader;
+                      const { name, description, github } = leader;
+                      const initials = name
+                        .split(" ")
+                        .filter(Boolean)
+                        .map((part) => part[0])
+                        .slice(0, 2)
+                        .join("");
                       return (
                         <li class="flex items-start gap-4 sm:items-center sm:gap-6">
-                          <img
-                            src={`https://github.com/${githubUser}.png`}
-                            alt={`Foto de perfil de ${name}`}
-                            class="size-12 shrink-0 rounded-full sm:size-15"
-                            loading="lazy"
-                            width="60"
-                            height="60"
-                          />
+                          {github ? (
+                            <img
+                              src={`https://github.com/${github}.png`}
+                              alt={`Foto de perfil de ${name}`}
+                              class="size-12 shrink-0 rounded-full sm:size-15"
+                              loading="lazy"
+                              width="60"
+                              height="60"
+                            />
+                          ) : (
+                            <div class="bg-foreground/10 text-foreground/70 flex size-12 shrink-0 items-center justify-center rounded-full text-sm font-bold sm:size-15">
+                              {initials}
+                            </div>
+                          )}
                           <div class="flex flex-col gap-1">
                             <h4 class="text-sm font-bold sm:text-base">
                               {name}
@@ -143,10 +181,12 @@ coordsData as CoordData[];
                               {description}
                             </p>
                             <a
-                              href={`https://github.com/${githubUser}`}
+                              href={
+                                github ? `https://github.com/${github}` : "#"
+                              }
                               class="text-primary text-xs hover:underline sm:text-sm"
                               target="_blank"
-                              rel="noopener noreferrer"
+                              rel={github ? "noopener noreferrer" : undefined}
                               aria-label={`Perfil de GitHub de ${name}`}
                             >
                               GitHub

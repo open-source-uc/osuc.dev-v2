@@ -22,16 +22,16 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
   image="/hackscate.webp"
 >
   <main
-    class="bg-background text-foreground min-h-screen px-10 lg:px-20 xl:px-50"
+    class="bg-background text-foreground min-h-screen max-w-full overflow-x-hidden px-10 lg:px-20 xl:px-50"
   >
     <section
       id="hero"
-      class="flex min-h-screen flex-col items-center justify-center gap-8 py-20 text-center"
+      class="relative flex min-h-screen flex-col items-center justify-center gap-8 py-20 text-center"
     >
-      <h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">
-        Open Source <span class="text-primary">UC</span>
+      <h1 class="z-20 text-4xl font-bold sm:text-5xl md:text-7xl">
+        Open Source <span class="text-primary">eUC</span>
       </h1>
-      <p class="max-w-3xl px-4 text-base sm:text-lg md:text-2xl">
+      <p class="z-20 max-w-3xl px-4 text-base sm:text-lg md:text-2xl">
         Somos una comunidad de estudiantes de la Universidad Catolica de Chile.
         Apasionada por crear e impulsar proyectos bacanes de código abierto.
       </p>
@@ -47,15 +47,21 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
 
     <section
       id="projects"
-      class="flex w-full flex-col items-center gap-4 py-20"
+      class="z-20 flex w-full flex-col items-center gap-4 py-20"
     >
-      <h2 class="pb-6 text-3xl font-bold md:text-5xl">Proyectos destacados</h2>
-      <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+      <h2 class="z-20 pb-6 text-3xl font-bold md:text-5xl">
+        Proyectos destacados
+      </h2>
+      <div class="z-20 grid w-full grid-cols-1 gap-4 md:grid-cols-2">
         {
           pinnedRepos.slice(0, 2).map((repo, index) => {
             const bgPosition = index % 2 === 0 ? "right" : "left";
             return (
-              <BentoRepo repo={repo} className="" bg_position={bgPosition} />
+              <BentoRepo
+                repo={repo}
+                className="z-20"
+                bg_position={bgPosition}
+              />
             );
           })
         }

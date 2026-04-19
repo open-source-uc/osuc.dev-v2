@@ -1,20 +1,76 @@
 ---
+import GitHubIcon from "@icons/GitHubIcon.astro";
+import LinkedInIcon from "@icons/LinkedinIcon.astro";
+import InstagramIcon from "@icons/InstagramIcon.astro";
 interface Props {
   name: string;
-  github: string | null;
   role: string;
+  description: string;
+  github: string | null;
+  linkedin: string | null;
+  instagram: string | null;
 }
 
-const { name, github, role } = Astro.props;
+const { name, role, description, github, linkedin, instagram } = Astro.props;
+
+let descriptionText = description.length == 0 ? role : description;
 ---
 
-<div class="flex flex-col items-center justify-center gap-4 align-middle">
-  <img
-    src=`https://github.com/${github}.png`
-    alt=""
-    class="size-12 shrink-0 rounded-full sm:size-22"
-    loading="lazy"
-  />
-  <h3 class="text-2xl">{name}</h3>
-  <h4 class="text-xl">{role}</h4>
+<div
+  class="border-foreground/30 m-2 flex min-h-64 flex-col items-center gap-4 rounded-xl border-2 p-6 align-middle md:gap-6"
+>
+  <header class="flex w-full items-center gap-4">
+    <img
+      src={github ? `https://github.com/${github}.png` : undefined}
+      alt={name}
+      class="col-start-1 col-end-2 row-start-1 row-end-3 size-12 shrink-0 rounded-full sm:size-15"
+      loading="lazy"
+    />
+    <div class="flex flex-col">
+      <h4 class="text-primary h-full">{role}</h4>
+      <h3 class="text-2xl">{name}</h3>
+    </div>
+  </header>
+  <p class="text-md col-span-2 size-full flex-1">{descriptionText}</p>
+  <footer class="flex w-full gap-4">
+    {
+      github && (
+        <a
+          href={`https://github.com/${github}`}
+          class="hover:text-primary flex items-center gap-2 text-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Perfil de GitHub de ${name}`}
+        >
+          <GitHubIcon size={26} />
+        </a>
+      )
+    }
+    {
+      linkedin && (
+        <a
+          href={linkedin}
+          class="hover:text-primary flex items-center gap-2 text-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Perfil de LinkedIn de ${name}`}
+        >
+          <LinkedInIcon size={26} />
+        </a>
+      )
+    }
+    {
+      instagram && (
+        <a
+          href={instagram}
+          class="hover:text-primary flex items-center gap-2 text-sm"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Perfil de Instagram de ${name}`}
+        >
+          <InstagramIcon size={26} />
+        </a>
+      )
+    }
+  </footer>
 </div>
