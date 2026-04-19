@@ -2,6 +2,7 @@
 import type { Repo } from "@/types/repos";
 import StarIcon from "@/components/Icons/StarIcon.astro";
 import ForkIcon from "@/components/Icons/ForkIcon.astro";
+import GitHubIcon from "@/components/Icons/GitHubIcon.astro"
 
 interface Props {
     repo: Repo;
@@ -11,13 +12,17 @@ interface Props {
 
 const { repo, className = "", bg_position = "right" }: Props = Astro.props;
 const {
-    name,
-    description,
-    primaryLanguage,
-    stargazerCount,
-    forkCount,
-    openGraphImageUrl,
+  name,
+  homepageUrl,
+  description,
+  primaryLanguage,
+  stargazerCount,
+  forkCount,
+  openGraphImageUrl,
 } = repo;
+const repoUrl = `https://github.com/open-source-uc/${name}`;
+let homeUrl = homepageUrl;
+homeUrl = homeUrl.length == 0 ? repoUrl : homeUrl;
 ---
 
 <article
@@ -39,7 +44,7 @@ const {
         <!-- Header -->
         <div>
             <a
-                href={`https://github.com/open-source-uc/${name}`}
+                href={homeUrl}
                 target="_blank"
             >
                 <h3
@@ -67,14 +72,23 @@ const {
                     </div>
                 )
             }
-            <div class="flex items-center gap-1">
-                <StarIcon size={14} className="w-3.5 h-3.5" />
-                <span>{stargazerCount}</span>
-            </div>
-            <div class="flex items-center gap-1">
-                <ForkIcon size={14} className="w-3.5 h-3.5" />
-                <span>{forkCount}</span>
-            </div>
+            <a href={repoUrl} class="hover:text-white">
+                <GitHubIcon size={22} />
+            </a>
+            <a href={repoUrl}>
+                <div class="flex items-center gap-1 hover:text-white">
+                    <StarIcon size={22} />
+                    <span>{stargazerCount}</span>
+                </div>
+            </a>
+            { forkCount > 0 && (
+            <a href={`${repoUrl}/forks`}>
+                <div class="flex items-center gap-1 hover:text-white">
+                    <ForkIcon size={22} />
+                    <span>{forkCount}</span>
+                </div>
+            </a>
+            )}
         </div>
     </div>
 </article>

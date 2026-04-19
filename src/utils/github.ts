@@ -16,6 +16,7 @@ query PinnedRepos($login: String!) {
           ... on Repository {
             name
             description
+            homepageUrl
             owner {
               login
             }
