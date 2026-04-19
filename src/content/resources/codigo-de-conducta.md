@@ -7,9 +7,9 @@ description: "Código de Conducta convenido para Contribuyentes de Open Source U
 
 > ⚠️ **TL;DR**
 >
-> Open Source eUC es una comunidad estudiantil **sin fines de lucro**, nacida en la Pontificia Universidad Católica de Chile, que busca compartir conocimiento y código abierto entre estudiantes universitarios de todo Chile.  
+> Open Source eUC es una comunidad estudiantil **sin fines de lucro**, nacida en la Pontificia Universidad Católica de Chile, que busca compartir conocimiento y código abierto entre estudiantes universitarios de todo Chile.
 >
-> Queremos que nuestras actividades —presenciales y online— sean seguras, respetuosas e inclusivas.  
+> Queremos que nuestras actividades —presenciales y online— sean seguras, respetuosas e inclusivas.
 >
 > Si eres víctima o presenciaste un incidente dentro de la comunidad (en GitHub, Discord, redes sociales, charlas, talleres, juntas, etc.), puedes denunciar y conseguir apoyo contactando al equipo de coordinación de la comunidad:
 >
@@ -24,9 +24,9 @@ Open Source eUC es una **comunidad estudiantil sin fines de lucro** que promueve
 
 Nuestra comunidad existe gracias al trabajo voluntario de sus miembros y se articula en distintos espacios:
 
-- Repositorios y organizaciones en GitHub u otras forjas de código.  
-- Plataformas digitales de comunicación (por ejemplo: Discord, Slack, Telegram, foros, correo, redes sociales).  
-- Actividades presenciales y online: charlas, talleres, hackathons, meetups, jornadas de estudio, reuniones de equipo y juntas informales.  
+- Repositorios y organizaciones en GitHub u otras forjas de código.
+- Plataformas digitales de comunicación (por ejemplo: Discord, Slack, Telegram, foros, correo, redes sociales).
+- Actividades presenciales y online: charlas, talleres, hackathons, meetups, jornadas de estudio, reuniones de equipo y juntas informales.
 
 Este Código de Conducta busca que todos estos espacios sean **seguros, respetuosos e inclusivos**, independientemente del rol que tengas (organizador/a, expositor/a, contribuidor/a, asistente, etc.).
 
@@ -36,22 +36,22 @@ Este Código de Conducta busca que todos estos espacios sean **seguros, respetuo
 
 Nosotros, como miembros de la comunidad, nos comprometemos a hacer de la participación en Open Source eUC una experiencia libre de acoso para todo el mundo, independientemente de:
 
-- Edad  
-- Dimensión corporal  
-- Discapacidad visible o invisible  
-- Etnicidad  
-- Características sexuales  
-- Identidad y expresión de género  
-- Nivel de experiencia  
-- Educación  
-- Nivel socioeconómico  
-- Nacionalidad  
-- Apariencia personal  
-- Raza  
-- Casta  
-- Color  
-- Religión  
-- Identidad u orientación sexual  
+- Edad
+- Dimensión corporal
+- Discapacidad visible o invisible
+- Etnicidad
+- Características sexuales
+- Identidad y expresión de género
+- Nivel de experiencia
+- Educación
+- Nivel socioeconómico
+- Nacionalidad
+- Apariencia personal
+- Raza
+- Casta
+- Color
+- Religión
+- Identidad u orientación sexual
 
 Nos comprometemos a actuar e interactuar de maneras que contribuyan a una comunidad **abierta, acogedora, diversa, inclusiva y sana**, tanto en los espacios digitales como en las actividades presenciales.
 
@@ -63,33 +63,33 @@ Nos comprometemos a actuar e interactuar de maneras que contribuyan a una comuni
 
 Ejemplos de comportamientos que contribuyen a crear un ambiente positivo para nuestra comunidad:
 
-- Demostrar **empatía y amabilidad** ante otras personas.  
-- Respetar **diferentes opiniones, puntos de vista y experiencias**.  
-- Dar y aceptar adecuadamente **retroalimentación constructiva**.  
-- Aceptar la responsabilidad y **disculparse** ante quienes se vean afectados por nuestros errores, aprendiendo de la experiencia.  
-- Centrarse en lo que sea mejor **no solo para nosotros como individuos, sino para la comunidad en general**.  
-- Favorecer un entorno en que las personas nuevas se sientan **bienvenidas y acompañadas**, especialmente si es su primer acercamiento al mundo Open Source.  
-- Cuidar la **logística y el espacio físico** en actividades presenciales (respetar horarios, no dejar basura, colaborar con las indicaciones del equipo organizador).  
+- Demostrar **empatía y amabilidad** ante otras personas.
+- Respetar **diferentes opiniones, puntos de vista y experiencias**.
+- Dar y aceptar adecuadamente **retroalimentación constructiva**.
+- Aceptar la responsabilidad y **disculparse** ante quienes se vean afectados por nuestros errores, aprendiendo de la experiencia.
+- Centrarse en lo que sea mejor **no solo para nosotros como individuos, sino para la comunidad en general**.
+- Favorecer un entorno en que las personas nuevas se sientan **bienvenidas y acompañadas**, especialmente si es su primer acercamiento al mundo Open Source.
+- Cuidar la **logística y el espacio físico** en actividades presenciales (respetar horarios, no dejar basura, colaborar con las indicaciones del equipo organizador).
 
 ### 3.2 Comportamientos inaceptables
 
 Ejemplos de comportamiento inaceptable en nuestra comunidad (online o presencial):
 
-- El uso de **lenguaje o imágenes sexualizadas**, y aproximaciones o atenciones sexuales de cualquier tipo.  
-- Comentarios despectivos (trolling), insultantes o derogatorios, y **ataques personales** hacia individuos o grupos.  
-- **Lenguaje vulgar** o agresivo que pueda dañar la sensibilidad de otras personas.  
-- Cualquier forma de **acoso**, ya sea en público o en privado.  
-- Publicar información privada de otras personas, tales como direcciones físicas, teléfonos o correos electrónicos, sin su permiso explícito.  
-- Amenazas, intimidación o conductas que generen un entorno inseguro para otras personas.  
-- Contacto físico no deseado o invasivo (por ejemplo, abrazos, toques o acercamientos que la otra persona no consiente).  
-- Comentarios o chistes basados en estereotipos que menosprecien a una persona o grupo.  
-- Interrupciones reiteradas, monopolizar la palabra o impedir que otros participen en charlas, talleres o discusiones.  
+- El uso de **lenguaje o imágenes sexualizadas**, y aproximaciones o atenciones sexuales de cualquier tipo.
+- Comentarios despectivos (trolling), insultantes o derogatorios, y **ataques personales** hacia individuos o grupos.
+- **Lenguaje vulgar** o agresivo que pueda dañar la sensibilidad de otras personas.
+- Cualquier forma de **acoso**, ya sea en público o en privado.
+- Publicar información privada de otras personas, tales como direcciones físicas, teléfonos o correos electrónicos, sin su permiso explícito.
+- Amenazas, intimidación o conductas que generen un entorno inseguro para otras personas.
+- Contacto físico no deseado o invasivo (por ejemplo, abrazos, toques o acercamientos que la otra persona no consiente).
+- Comentarios o chistes basados en estereotipos que menosprecien a una persona o grupo.
+- Interrupciones reiteradas, monopolizar la palabra o impedir que otros participen en charlas, talleres o discusiones.
 - Cualquier otra conducta que pueda ser razonablemente considerada **inapropiada en un entorno profesional o académico**.
 
 En actividades presenciales, también es inaceptable:
 
-- Asistir bajo la influencia de alcohol u otras sustancias de manera que se genere un **comportamiento riesgoso o irrespetuoso** hacia otras personas.  
-- Ignorar las indicaciones de seguridad del lugar o del equipo organizador, poniendo en riesgo a la comunidad.  
+- Asistir bajo la influencia de alcohol u otras sustancias de manera que se genere un **comportamiento riesgoso o irrespetuoso** hacia otras personas.
+- Ignorar las indicaciones de seguridad del lugar o del equipo organizador, poniendo en riesgo a la comunidad.
 
 ---
 
@@ -97,13 +97,13 @@ En actividades presenciales, también es inaceptable:
 
 Este Código de Conducta aplica a **todos los espacios vinculados a Open Source eUC**, incluyendo pero no limitado a:
 
-- Repositorios de código (issues, pull requests, discusiones, wikis, etc.).  
-- Plataformas de chat, foros, correos y redes sociales oficiales de la comunidad.  
-- Eventos presenciales y en línea organizados o coorganizados por Open Source eUC (charlas, talleres, hackathons, reuniones, juntas informales en nombre de la comunidad).  
-- Cualquier instancia en la que una persona actúe en **representación de Open Source eUC**, por ejemplo:  
-  - Uso de cuentas de correo oficiales de la comunidad.  
-  - Presentaciones en eventos externos donde se nombre a Open Source eUC.  
-  - Participación en redes sociales o medios como vocero/a o representante.  
+- Repositorios de código (issues, pull requests, discusiones, wikis, etc.).
+- Plataformas de chat, foros, correos y redes sociales oficiales de la comunidad.
+- Eventos presenciales y en línea organizados o coorganizados por Open Source eUC (charlas, talleres, hackathons, reuniones, juntas informales en nombre de la comunidad).
+- Cualquier instancia en la que una persona actúe en **representación de Open Source eUC**, por ejemplo:
+  - Uso de cuentas de correo oficiales de la comunidad.
+  - Presentaciones en eventos externos donde se nombre a Open Source eUC.
+  - Participación en redes sociales o medios como vocero/a o representante.
 
 Al participar en estos espacios, se considera que aceptas y te comprometes a respetar este Código de Conducta.
 
@@ -113,11 +113,11 @@ Al participar en estos espacios, se considera que aceptas y te comprometes a res
 
 Los **administradores de la comunidad**, junto con el/la Coordinador/a de Comunidad e Inclusión, son responsables de:
 
-- Aclarar y hacer cumplir nuestros estándares de comportamiento aceptable.  
-- Tomar acciones apropiadas y correctivas, de forma **justa y proporcional**, ante cualquier comportamiento que consideren inapropiado, amenazante, ofensivo o dañino.  
-- Proteger la privacidad y seguridad de quienes reporten incidentes.  
+- Aclarar y hacer cumplir nuestros estándares de comportamiento aceptable.
+- Tomar acciones apropiadas y correctivas, de forma **justa y proporcional**, ante cualquier comportamiento que consideren inapropiado, amenazante, ofensivo o dañino.
+- Proteger la privacidad y seguridad de quienes reporten incidentes.
 
-Los administradores de la comunidad tendrán el derecho y la responsabilidad de **eliminar, editar o rechazar** comentarios, commits, código, ediciones de wikis, issues y otras contribuciones (digitales o presenciales) que no se alineen con este Código de Conducta, y comunicarán las razones de sus decisiones de moderación cuando sea apropiado.  
+Los administradores de la comunidad tendrán el derecho y la responsabilidad de **eliminar, editar o rechazar** comentarios, commits, código, ediciones de wikis, issues y otras contribuciones (digitales o presenciales) que no se alineen con este Código de Conducta, y comunicarán las razones de sus decisiones de moderación cuando sea apropiado.
 
 ---
 
@@ -125,24 +125,24 @@ Los administradores de la comunidad tendrán el derecho y la responsabilidad de 
 
 Si eres víctima o testigo de un comportamiento abusivo, acosador o inaceptable, o si tienes dudas sobre si una situación constituye una vulneración a este Código de Conducta, puedes:
 
-- Escribir al **correo general de comunidad e inclusion de Open Source eUC**:  
+- Escribir al **correo general de comunidad e inclusion de Open Source eUC**:
   - <comunidad@osuc.dev>.
 - Escribir al **correo general de coordinación de Open Source eUC**:
   - <contacto@osuc.dev>.
-- Acercarte a cualquier miembro del equipo organizador durante un evento presencial, quien deberá canalizar el reporte hacia las personas responsables.  
+- Acercarte a cualquier miembro del equipo organizador durante un evento presencial, quien deberá canalizar el reporte hacia las personas responsables.
 
-Todos los reportes serán **evaluados e investigados** de manera puntual y justa.  
+Todos los reportes serán **evaluados e investigados** de manera puntual y justa.
 
 La organización se compromete a:
 
-- Mantener, en la medida de lo posible, la **confidencialidad** de la persona que reporta.  
-- Informar, cuando sea apropiado, sobre las **acciones tomadas** a raíz del reporte.  
+- Mantener, en la medida de lo posible, la **confidencialidad** de la persona que reporta.
+- Informar, cuando sea apropiado, sobre las **acciones tomadas** a raíz del reporte.
 
 ---
 
 ## 7. Guías de aplicación
 
-Los administradores de la comunidad seguirán estas **Guías de Impacto en la Comunidad** para determinar las consecuencias de cualquier acción que juzguen como un incumplimiento de este Código de Conducta (ya sea en un repositorio, en un chat o en un evento presencial).  
+Los administradores de la comunidad seguirán estas **Guías de Impacto en la Comunidad** para determinar las consecuencias de cualquier acción que juzguen como un incumplimiento de este Código de Conducta (ya sea en un repositorio, en un chat o en un evento presencial).
 
 ### 7.1 Corrección
 
@@ -180,7 +180,7 @@ Expulsión permanente de cualquier tipo de interacción con la comunidad y sus e
 
 ## 8. Compromiso de mejora continua
 
-Open Source eUC entiende este Código de Conducta como un **documento vivo**, que puede ser revisado y mejorado a medida que la comunidad crece y aprende.  
+Open Source eUC entiende este Código de Conducta como un **documento vivo**, que puede ser revisado y mejorado a medida que la comunidad crece y aprende.
 
 Periódicamente, la organización podrá revisar este documento, incorporar sugerencias de los miembros y adaptar las políticas a nuevas realidades, siempre manteniendo el foco en el **respeto, la inclusión y la seguridad** de todas las personas que participan.
 
@@ -191,7 +191,7 @@ Periódicamente, la organización podrá revisar este documento, incorporar suge
 Este Código de Conducta es una adaptación de:
 
 - El [Contributor Covenant](https://www.contributor-covenant.org), versión 2.1, disponible en:  
-  <https://www.contributor-covenant.org/es/version/2/1/code_of_conduct.html>.  
+  <https://www.contributor-covenant.org/es/version/2/1/code_of_conduct.html>.
 - El Código de Conducta previo de Open Source eUC, el cual sirvió como base para ajustar lenguaje, tono y formulario de contacto.
 
 Las Guías de Impacto en la Comunidad están inspiradas en la [escalera de aplicación del código de conducta de Mozilla](https://github.com/mozilla/diversity).

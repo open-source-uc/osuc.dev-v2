@@ -1,19 +1,25 @@
 {
-    "name": "",
-    "type": "module",
-    "version": "0.0.1",
-	"packageManager": "pnpm@10.30.3",
-    "scripts": {
-        "dev": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro"
-    },
-    "dependencies": {
-        "@fontsource-variable/funnel-display": "5.2.8",
-        "@tailwindcss/vite": "4.1.17",
-        "astro": "5.15.8",
-        "tailwindcss": "4.1.17",
-        "unist-util-visit": "5.1.0"
-    }
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.30.3",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@fontsource-variable/funnel-display": "5.2.8",
+    "@tailwindcss/vite": "4.1.17",
+    "astro": "5.15.8",
+    "tailwindcss": "4.1.17",
+    "unist-util-visit": "5.1.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.7.2"
+  }
 }

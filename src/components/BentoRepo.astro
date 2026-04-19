@@ -2,12 +2,12 @@
 import type { Repo } from "@/types/repos";
 import StarIcon from "@/components/Icons/StarIcon.astro";
 import ForkIcon from "@/components/Icons/ForkIcon.astro";
-import GitHubIcon from "@/components/Icons/GitHubIcon.astro"
+import GitHubIcon from "@/components/Icons/GitHubIcon.astro";
 
 interface Props {
-    repo: Repo;
-    className?: string;
-    bg_position: "left" | "right";
+  repo: Repo;
+  className?: string;
+  bg_position: "left" | "right";
 }
 
 const { repo, className = "", bg_position = "right" }: Props = Astro.props;
@@ -26,69 +26,64 @@ homeUrl = homeUrl.length == 0 ? repoUrl : homeUrl;
 ---
 
 <article
-    class={`group relative bg-background/60 h-64 overflow-hidden rounded-2xl border border-foreground/10 hover:border-primary/30 transition-colors duration-300 ease-in-out group transform-gpu ${className}`}
+  class={`group relative bg-background/60 h-64 overflow-hidden rounded-2xl border border-foreground/10 hover:border-primary/30 transition-colors duration-300 ease-in-out group transform-gpu ${className}`}
 >
-    <!-- Imagen del Social Preview - lado derecho -->
-    <div
-        class={`absolute top-0 ${bg_position}-0 w-full h-full opacity-25 z-10`}
-    >
-        <img
-            src={openGraphImageUrl}
-            alt={name}
-            class="w-full h-full object-cover blur-2xl brightness-50 group-hover:blur-xs transition-all duration-200 ease-in-out"
-        />
+  <!-- Imagen del Social Preview - lado derecho -->
+  <div class={`absolute top-0 ${bg_position}-0 w-full h-full opacity-25 z-10`}>
+    <img
+      src={openGraphImageUrl}
+      alt={name}
+      class="h-full w-full object-cover blur-2xl brightness-50 transition-all duration-200 ease-in-out group-hover:blur-xs"
+    />
+  </div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 flex h-full flex-col justify-between p-5">
+    <!-- Header -->
+    <div>
+      <a href={homeUrl} target="_blank">
+        <h3
+          class="text-foreground mb-1.5 text-lg font-semibold hover:underline"
+        >
+          {name}
+        </h3>
+      </a>
+      {
+        description && (
+          <p class="text-foreground/60 line-clamp-2 text-sm">{description}</p>
+        )
+      }
     </div>
 
-    <!-- Contenido -->
-    <div class="relative z-10 h-full p-5 flex flex-col justify-between">
-        <!-- Header -->
-        <div>
-            <a
-                href={homeUrl}
-                target="_blank"
-            >
-                <h3
-                    class="text-lg font-semibold text-foreground mb-1.5 hover:underline"
-                >
-                    {name}
-                </h3>
-            </a>
-            {
-                description && (
-                    <p class="text-sm text-foreground/60 line-clamp-2">
-                        {description}
-                    </p>
-                )
-            }
+    <!-- Footer -->
+    <div class="text-foreground/50 flex items-center gap-4 text-xs">
+      {
+        primaryLanguage && (
+          <div class="flex items-center gap-1.5">
+            <span class="bg-primary/70 h-2.5 w-2.5 rounded-full" />
+            <span>{primaryLanguage.name}</span>
+          </div>
+        )
+      }
+      <a href={repoUrl} class="hover:text-white">
+        <GitHubIcon size={22} />
+      </a>
+      <a href={repoUrl}>
+        <div class="flex items-center gap-1 hover:text-white">
+          <StarIcon size={22} />
+          <span>{stargazerCount}</span>
         </div>
-
-        <!-- Footer -->
-        <div class="flex items-center gap-4 text-xs text-foreground/50">
-            {
-                primaryLanguage && (
-                    <div class="flex items-center gap-1.5">
-                        <span class="w-2.5 h-2.5 rounded-full bg-primary/70" />
-                        <span>{primaryLanguage.name}</span>
-                    </div>
-                )
-            }
-            <a href={repoUrl} class="hover:text-white">
-                <GitHubIcon size={22} />
-            </a>
-            <a href={repoUrl}>
-                <div class="flex items-center gap-1 hover:text-white">
-                    <StarIcon size={22} />
-                    <span>{stargazerCount}</span>
-                </div>
-            </a>
-            { forkCount > 0 && (
-            <a href={`${repoUrl}/forks`}>
-                <div class="flex items-center gap-1 hover:text-white">
-                    <ForkIcon size={22} />
-                    <span>{forkCount}</span>
-                </div>
-            </a>
-            )}
-        </div>
+      </a>
+      {
+        forkCount > 0 && (
+          <a href={`${repoUrl}/forks`}>
+            <div class="flex items-center gap-1 hover:text-white">
+              <ForkIcon size={22} />
+              <span>{forkCount}</span>
+            </div>
+          </a>
+        )
+      }
     </div>
+  </div>
 </article>

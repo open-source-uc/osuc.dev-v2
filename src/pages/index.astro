@@ -17,160 +17,129 @@ const pinnedRepos = await getPinnedRepos(orgName, githubToken);
 ---
 
 <Layout
-    title="Open Source UC - Comunidad de desarrollo open source UC Chile"
-    description="Únete a la comunidad estudiantil de código abierto más activa de la Universidad Católica de Chile. Colabora en proyectos reales, aprende nuevas tecnologías y desarrolla habilidades profesionales."
-    image="/hackscate.webp"
+  title="Open Source UC - Comunidad de desarrollo open source UC Chile"
+  description="Únete a la comunidad estudiantil de código abierto más activa de la Universidad Católica de Chile. Colabora en proyectos reales, aprende nuevas tecnologías y desarrolla habilidades profesionales."
+  image="/hackscate.webp"
 >
-    <main
-        class="min-h-screen bg-background px-10 lg:px-20 xl:px-50 text-foreground"
+  <main
+    class="bg-background text-foreground min-h-screen px-10 lg:px-20 xl:px-50"
+  >
+    <section
+      id="hero"
+      class="flex min-h-screen flex-col items-center justify-center gap-8 py-20 text-center"
     >
-        <section
-            id="hero"
-            class="min-h-screen flex flex-col justify-center items-center gap-8 py-20 text-center"
-        >
-            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold">
-                Open Source <span class="text-primary">UC</span>
-            </h1>
-            <p class="text-base sm:text-lg md:text-2xl max-w-3xl px-4">
-                Somos una comunidad de estudiantes de la Universidad Catolica de
-                Chile. Apasionada por crear e impulsar proyectos bacanes de
-                código abierto.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 md:gap-10 px-4">
-                <LinkButton
-                    text="Únete a la comunidad"
-                    href="#community"
-                    type="primary"
-                />
-                <LinkButton
-                    text="Sobre nosotros"
-                    href="/about"
-                    type="secondary"
-                />
-            </div>
-        </section>
+      <h1 class="text-4xl font-bold sm:text-5xl md:text-7xl">
+        Open Source <span class="text-primary">UC</span>
+      </h1>
+      <p class="max-w-3xl px-4 text-base sm:text-lg md:text-2xl">
+        Somos una comunidad de estudiantes de la Universidad Catolica de Chile.
+        Apasionada por crear e impulsar proyectos bacanes de código abierto.
+      </p>
+      <div class="flex flex-col gap-4 px-4 sm:flex-row md:gap-10">
+        <LinkButton
+          text="Únete a la comunidad"
+          href="#community"
+          type="primary"
+        />
+        <LinkButton text="Sobre nosotros" href="/about" type="secondary" />
+      </div>
+    </section>
 
-        <section
-            id="projects"
-            class="flex flex-col items-center w-full gap-4 py-20"
-        >
-            <h2 class="font-bold text-3xl md:text-5xl pb-6">
-                Proyectos destacados
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-4">
-                {
-                    pinnedRepos.slice(0, 2).map((repo, index) => {
-                        const bgPosition = index % 2 === 0 ? "right" : "left";
-                        return (
-                            <BentoRepo
-                                repo={repo}
-                                className=""
-                                bg_position={bgPosition}
-                            />
-                        );
-                    })
-                }
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-4">
-                {
-                    pinnedRepos.slice(2).map((repo, index) => {
-                        const rowIndex = Math.floor(index / 2);
-                        const isFirstInRow = index % 2 === 0;
+    <section
+      id="projects"
+      class="flex w-full flex-col items-center gap-4 py-20"
+    >
+      <h2 class="pb-6 text-3xl font-bold md:text-5xl">Proyectos destacados</h2>
+      <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+        {
+          pinnedRepos.slice(0, 2).map((repo, index) => {
+            const bgPosition = index % 2 === 0 ? "right" : "left";
+            return (
+              <BentoRepo repo={repo} className="" bg_position={bgPosition} />
+            );
+          })
+        }
+      </div>
+      <div class="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+        {
+          pinnedRepos.slice(2).map((repo, index) => {
+            const rowIndex = Math.floor(index / 2);
+            const isFirstInRow = index % 2 === 0;
 
-                        let widthClass;
-                        if (rowIndex % 2 === 0) {
-                            widthClass = isFirstInRow
-                                ? "md:col-span-2"
-                                : "md:col-span-1";
-                        } else {
-                            widthClass = isFirstInRow
-                                ? "md:col-span-1"
-                                : "md:col-span-2";
-                        }
+            let widthClass;
+            if (rowIndex % 2 === 0) {
+              widthClass = isFirstInRow ? "md:col-span-2" : "md:col-span-1";
+            } else {
+              widthClass = isFirstInRow ? "md:col-span-1" : "md:col-span-2";
+            }
 
-                        const bg_position =
-                            (index + 2) % 2 === 0 ? "right" : "left";
-                        return (
-                            <BentoRepo
-                                repo={repo}
-                                className={widthClass}
-                                bg_position={bg_position}
-                            />
-                        );
-                    })
-                }
-            </div>
-            <div
-                class="flex flex-col md:flex-row gap-4 md:gap-10 w-full md:w-auto px-4 md:px-0"
-            >
-                <LinkButton
-                    text="Ve las issues"
-                    href="https://github.com/issues?q=is:open+is:issue+archived:false+user:open-source-uc"
-                    className="flex items-center justify-center gap-2"
-                    type="secondary"
-                    ><IssueIcon
-                        size={20}
-                        className="md:w-6 md:h-6"
-                    /></LinkButton
-                >
-                <LinkButton
-                    text="Ve nuestra organizacion"
-                    href="https://github.com/open-source-uc"
-                    className="flex items-center justify-center gap-2"
-                    type="secondary"
-                    ><GitHubIcon
-                        size={20}
-                        className="md:w-6 md:h-6"
-                    /></LinkButton
-                >
-            </div>
-        </section>
-        <section
-            id="community"
-            class="flex flex-col items-center w-full gap-4 mt-20 py-20 md:py-40 px-4"
+            const bg_position = (index + 2) % 2 === 0 ? "right" : "left";
+            return (
+              <BentoRepo
+                repo={repo}
+                className={widthClass}
+                bg_position={bg_position}
+              />
+            );
+          })
+        }
+      </div>
+      <div
+        class="flex w-full flex-col gap-4 px-4 md:w-auto md:flex-row md:gap-10 md:px-0"
+      >
+        <LinkButton
+          text="Ve las issues"
+          href="https://github.com/issues?q=is:open+is:issue+archived:false+user:open-source-uc"
+          className="flex items-center justify-center gap-2"
+          type="secondary"
+          ><IssueIcon size={20} className="md:h-6 md:w-6" /></LinkButton
         >
-            <h2 class="font-bold text-3xl md:text-5xl pb-6 text-center">
-                Únete a nuestra comunidad
-            </h2>
-            <p class="text-center text-base md:text-xl max-w-3xl">
-                Participa en la creación y colaboración en proyectos de distinto
-                ámbito y alcance. Únete a desarrollar uno de los proyectos que
-                organizamos cada semestre o a apoyar a impulsar la comunidad.
-            </p>
-            <div
-                class="flex flex-col md:flex-row gap-4 md:gap-10 mt-6 w-full md:w-auto"
-            >
-                <LinkButton
-                    text="Únete a nuestro Discord"
-                    href={SOCIAL_LINKS.discord}
-                    className="flex items-center justify-center gap-2 md:gap-4"
-                    type="secondary"
-                    ><DiscordIcon
-                        size={20}
-                        className="md:w-6 md:h-6"
-                    /></LinkButton
-                >
-                <LinkButton
-                    text="Grupo de Whatsapp"
-                    href={SOCIAL_LINKS.whatsapp}
-                    className="flex items-center justify-center gap-2 md:gap-4"
-                    type="secondary"
-                    ><WhatsappIcon
-                        size={20}
-                        className="md:w-6 md:h-6"
-                    /></LinkButton
-                >
-                <LinkButton
-                    text="Síguenos en Instagram"
-                    href={SOCIAL_LINKS.instagram}
-                    className="flex items-center justify-center gap-2 md:gap-4"
-                    type="secondary"
-                    ><InstagramIcon
-                        size={20}
-                        className="md:w-6 md:h-6"
-                    /></LinkButton
-                >
-            </div>
-        </section>
-    </main>
+        <LinkButton
+          text="Ve nuestra organizacion"
+          href="https://github.com/open-source-uc"
+          className="flex items-center justify-center gap-2"
+          type="secondary"
+          ><GitHubIcon size={20} className="md:h-6 md:w-6" /></LinkButton
+        >
+      </div>
+    </section>
+    <section
+      id="community"
+      class="mt-20 flex w-full flex-col items-center gap-4 px-4 py-20 md:py-40"
+    >
+      <h2 class="pb-6 text-center text-3xl font-bold md:text-5xl">
+        Únete a nuestra comunidad
+      </h2>
+      <p class="max-w-3xl text-center text-base md:text-xl">
+        Participa en la creación y colaboración en proyectos de distinto ámbito
+        y alcance. Únete a desarrollar uno de los proyectos que organizamos cada
+        semestre o a apoyar a impulsar la comunidad.
+      </p>
+      <div
+        class="mt-6 flex w-full flex-col gap-4 md:w-auto md:flex-row md:gap-10"
+      >
+        <LinkButton
+          text="Únete a nuestro Discord"
+          href={SOCIAL_LINKS.discord}
+          className="flex items-center justify-center gap-2 md:gap-4"
+          type="secondary"
+          ><DiscordIcon size={20} className="md:h-6 md:w-6" /></LinkButton
+        >
+        <LinkButton
+          text="Grupo de Whatsapp"
+          href={SOCIAL_LINKS.whatsapp}
+          className="flex items-center justify-center gap-2 md:gap-4"
+          type="secondary"
+          ><WhatsappIcon size={20} className="md:h-6 md:w-6" /></LinkButton
+        >
+        <LinkButton
+          text="Síguenos en Instagram"
+          href={SOCIAL_LINKS.instagram}
+          className="flex items-center justify-center gap-2 md:gap-4"
+          type="secondary"
+          ><InstagramIcon size={20} className="md:h-6 md:w-6" /></LinkButton
+        >
+      </div>
+    </section>
+  </main>
 </Layout>

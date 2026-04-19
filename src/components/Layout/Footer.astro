@@ -8,152 +8,144 @@ import WhatsappIcon from "@components/Icons/WhatsappIcon.astro";
 import { SOCIAL_LINKS } from "@/data/social-links";
 
 interface Props {
-    className?: string;
+  className?: string;
 }
 
 const { className = "" }: Props = Astro.props;
 ---
 
 <footer
-    class={`flex justify-center w-full bg-black text-foreground/75 py-10 px-6 sm:px-10 shadow-xl shadow-white ${className}`}
+  class={`flex justify-center w-full bg-black text-foreground/75 py-10 px-6 sm:px-10 shadow-xl shadow-white ${className}`}
 >
-    <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 max-w-6xl w-full"
+  <div
+    class="grid w-full max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 md:gap-6"
+  >
+    <section
+      class="flex h-full items-start justify-center gap-2 sm:justify-start"
     >
-        <section
-            class="flex gap-2 h-full items-start justify-center sm:justify-start"
-        >
-            <a
-                href="/"
-                aria-label="Ir al inicio"
-                class="flex gap-2 items-start hover:opacity-80 transition-opacity"
-            >
-                <OsucIcon
-                    className="w-8 h-8 md:w-10 md:h-10 mt-2 md:mt-3 mb-2"
-                />
-                <span class="text-4xl md:text-5xl font-bold">osuc</span>
-            </a>
-        </section>
+      <a
+        href="/"
+        aria-label="Ir al inicio"
+        class="flex items-start gap-2 transition-opacity hover:opacity-80"
+      >
+        <OsucIcon className="mt-2 mb-2 h-8 w-8 md:mt-3 md:h-10 md:w-10" />
+        <span class="text-4xl font-bold md:text-5xl">osuc</span>
+      </a>
+    </section>
 
-        <nav
-            class="flex flex-col text-center sm:text-left"
-            aria-labelledby="footer-info"
-        >
-            <h2 id="footer-info" class="font-bold text-base sm:text-lg mb-2">
-                Information
-            </h2>
-            <ul class="flex flex-col gap-1 text-sm sm:text-base">
-                <li>
-                    <a href="/" class="hover:text-foreground transition-colors"
-                        >Home</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="/conduct"
-                        class="hover:text-foreground transition-colors"
-                        >Code of Conduct</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="/about"
-                        class="hover:text-foreground transition-colors">About</a
-                    >
-                </li>
-            </ul>
-        </nav>
+    <nav
+      class="flex flex-col text-center sm:text-left"
+      aria-labelledby="footer-info"
+    >
+      <h2 id="footer-info" class="mb-2 text-base font-bold sm:text-lg">
+        Information
+      </h2>
+      <ul class="flex flex-col gap-1 text-sm sm:text-base">
+        <li>
+          <a href="/" class="hover:text-foreground transition-colors">Home</a>
+        </li>
+        <li>
+          <a href="/conduct" class="hover:text-foreground transition-colors"
+            >Code of Conduct</a
+          >
+        </li>
+        <li>
+          <a href="/about" class="hover:text-foreground transition-colors"
+            >About</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-        <nav
-            class="flex flex-col text-center sm:text-left"
-            aria-labelledby="footer-support"
-        >
-            <h2 id="footer-support" class="font-bold text-base sm:text-lg mb-2">
-                Support
-            </h2>
-            <ul class="flex flex-col gap-1 text-sm sm:text-base">
-                <li>
-                    <a
-                        href="mailto:coord@osuc.dev"
-                        class="hover:text-foreground transition-colors"
-                        >Contact</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="mailto:help@osuc.dev"
-                        class="hover:text-foreground transition-colors">Help</a
-                    >
-                </li>
-            </ul>
-        </nav>
+    <nav
+      class="flex flex-col text-center sm:text-left"
+      aria-labelledby="footer-support"
+    >
+      <h2 id="footer-support" class="mb-2 text-base font-bold sm:text-lg">
+        Support
+      </h2>
+      <ul class="flex flex-col gap-1 text-sm sm:text-base">
+        <li>
+          <a
+            href="mailto:coord@osuc.dev"
+            class="hover:text-foreground transition-colors">Contact</a
+          >
+        </li>
+        <li>
+          <a
+            href="mailto:help@osuc.dev"
+            class="hover:text-foreground transition-colors">Help</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-        <nav
-            class="flex flex-col items-center sm:items-start md:items-center"
-            aria-labelledby="footer-social"
-        >
-            <h2 id="footer-social" class="font-bold text-base sm:text-lg mb-2">
-                Social Media
-            </h2>
-            <ul
-                class="flex flex-wrap justify-center sm:justify-start md:justify-center gap-3 mt-2 max-w-[200px]"
-            >
-                <li>
-                    <a
-                        href={SOCIAL_LINKS.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram Open Source UC"
-                        class="hover:text-[#c13584] transition-colors"
-                    >
-                        <InstagramIcon size={24} />
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href={SOCIAL_LINKS.whatsapp}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="WhatsApp Open Source UC"
-                        class="hover:text-[#25D366] transition-colors"
-                    >
-                        <WhatsappIcon size={24} />
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href={SOCIAL_LINKS.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn Open Source UC"
-                        class="hover:text-[#0077B5] transition-colors"
-                    >
-                        <LinkedinIcon size={24} } />
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="https://github.com/open-source-uc"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub Open Source UC"
-                        class="hover:text-[#181717] transition-colors"
-                    >
-                        <GitHubIcon size={24} />
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href={SOCIAL_LINKS.telegram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Telegram Open Source UC"
-                        class="hover:text-[#24A1DE] transition-colors"
-                    >
-                        <TelegramIcon size={24} />
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <nav
+      class="flex flex-col items-center sm:items-start md:items-center"
+      aria-labelledby="footer-social"
+    >
+      <h2 id="footer-social" class="mb-2 text-base font-bold sm:text-lg">
+        Social Media
+      </h2>
+      <ul
+        class="mt-2 flex max-w-[200px] flex-wrap justify-center gap-3 sm:justify-start md:justify-center"
+      >
+        <li>
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram Open Source UC"
+            class="transition-colors hover:text-[#c13584]"
+          >
+            <InstagramIcon size={24} />
+          </a>
+        </li>
+        <li>
+          <a
+            href={SOCIAL_LINKS.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Open Source UC"
+            class="transition-colors hover:text-[#25D366]"
+          >
+            <WhatsappIcon size={24} />
+          </a>
+        </li>
+        <li>
+          <a
+            href={SOCIAL_LINKS.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Open Source UC"
+            class="transition-colors hover:text-[#0077B5]"
+          >
+            <LinkedinIcon size={24} } />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/open-source-uc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Open Source UC"
+            class="transition-colors hover:text-[#181717]"
+          >
+            <GitHubIcon size={24} />
+          </a>
+        </li>
+        <li>
+          <a
+            href={SOCIAL_LINKS.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram Open Source UC"
+            class="transition-colors hover:text-[#24A1DE]"
+          >
+            <TelegramIcon size={24} />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </footer>

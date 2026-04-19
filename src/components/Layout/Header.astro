@@ -9,192 +9,185 @@ import { SOCIAL_LINKS } from "@/data/social-links";
 import { SITE_NOTICE } from "@/data/site-notice";
 
 const noticeToneClasses = {
-    info: "bg-primary/30 text-foreground border-b border-primary/50",
-    success: "bg-green-500/50 text-foreground border-b border-green-500/20",
-    warning: "bg-yellow-400/15 text-foreground border-b border-yellow-500/30",
+  info: "bg-primary/30 text-foreground border-b border-primary/50",
+  success: "bg-green-500/50 text-foreground border-b border-green-500/20",
+  warning: "bg-yellow-400/15 text-foreground border-b border-yellow-500/30",
 } as const;
 
 const noticeTone = SITE_NOTICE.tone ?? "info";
 ---
 
 <header
-    class="sticky top-0 z-50 w-full bg-background text-foreground transition-all duration-200"
-    id="nav-header"
+  class="bg-background text-foreground sticky top-0 z-50 w-full transition-all duration-200"
+  id="nav-header"
 >
-    {
-        SITE_NOTICE.enabled && (
-            <div
-                class={`px-4 md:px-8 py-2 text-center text-xs md:text-sm ${noticeToneClasses[noticeTone]}`}
+  {
+    SITE_NOTICE.enabled && (
+      <div
+        class={`px-4 py-2 text-center text-xs md:px-8 md:text-sm ${noticeToneClasses[noticeTone]}`}
+      >
+        <p class="flex flex-wrap items-center justify-center gap-2">
+          <span>{SITE_NOTICE.message}</span>
+          {SITE_NOTICE.href && SITE_NOTICE.ctaLabel && (
+            <a
+              href={SITE_NOTICE.href}
+              class="font-semibold underline underline-offset-4 transition-opacity hover:opacity-80"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-                <p class="flex flex-wrap items-center justify-center gap-2">
-                    <span>{SITE_NOTICE.message}</span>
-                    {SITE_NOTICE.href && SITE_NOTICE.ctaLabel && (
-                        <a
-                            href={SITE_NOTICE.href}
-                            class="font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {SITE_NOTICE.ctaLabel}
-                        </a>
-                    )}
-                </p>
-            </div>
-        )
-    }
+              {SITE_NOTICE.ctaLabel}
+            </a>
+          )}
+        </p>
+      </div>
+    )
+  }
 
-    <input
-        type="checkbox"
-        name="menu-toggle"
-        id="menu-toggle"
-        class="hidden peer/menu"
-    />
+  <input
+    type="checkbox"
+    name="menu-toggle"
+    id="menu-toggle"
+    class="peer/menu hidden"
+  />
 
-    <div class="flex justify-between px-4 md:px-8 py-4 items-center">
-        <a
-            href="/"
-            class="flex items-center gap-2 md:gap-4 text-xl md:text-2xl font-bold align-middle"
-        >
-            <OsucIcon size={32} className="md:w-10 md:h-10" />
-            <h1 class="hidden sm:block">Open Source UC</h1>
-        </a>
-
-        <nav class="hidden md:block">
-            <ul class="flex gap-8 items-center [&>li]:text-lg">
-                <li>
-                    <a href="/about" class="hover:underline">About US</a>
-                </li>
-                <li>
-                    <a href="/#projects" class="hover:underline">Projects</a>
-                </li>
-            </ul>
-        </nav>
-
-        <label
-            for="menu-toggle"
-            class="md:hidden z-50 cursor-pointer text-foreground relative"
-        >
-            <MenuIcon size={32} />
-        </label>
-    </div>
-
-    <!-- Mobile menu -->
-    <nav
-        id="mobile-menu"
-        class="md:hidden fixed top-0 -right-full peer-checked/menu:right-0 w-full h-dvh bg-background transition-all duration-300 z-55"
+  <div class="flex items-center justify-between px-4 py-4 md:px-8">
+    <a
+      href="/"
+      class="flex items-center gap-2 align-middle text-xl font-bold md:gap-4 md:text-2xl"
     >
-        <div class="flex flex-col h-full justify-between p-8 pt-20">
-            <!-- Botón de cerrar -->
-            <label
-                for="menu-toggle"
-                class="absolute top-6 right-6 cursor-pointer text-foreground hover:text-primary transition-colors"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </label>
+      <OsucIcon size={32} className="md:h-10 md:w-10" />
+      <h1 class="hidden sm:block">Open Source UC</h1>
+    </a>
 
-            <!-- Logo y título -->
-            <div class="flex flex-col gap-8">
-                <div class="flex items-center gap-4">
-                    <OsucIcon size={48} />
-                    <h2 class="text-3xl font-bold">Open Source UC</h2>
-                </div>
-
-                <!-- Links de navegación -->
-                <ul class="flex flex-col gap-6 text-2xl">
-                    <li>
-                        <a
-                            href="/"
-                            class="hover:text-primary transition-colors block"
-                            >Home</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="/about"
-                            class="hover:text-primary transition-colors block"
-                            >About US</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="/#projects"
-                            class="hover:text-primary transition-colors block"
-                            >Projects</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="/conduct"
-                            class="hover:text-primary transition-colors block"
-                            >Code of Conduct</a
-                        >
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Redes sociales -->
-            <div class="flex flex-col gap-6">
-                <h3 class="text-xl font-semibold text-foreground/80">
-                    Síguenos
-                </h3>
-                <div class="flex gap-6">
-                    <a
-                        href={SOCIAL_LINKS.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram Open Source UC"
-                        class="hover:text-[#c13584] transition-colors"
-                    >
-                        <InstagramIcon size={32} />
-                    </a>
-                    <a
-                        href={SOCIAL_LINKS.telegram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Telegram Open Source UC"
-                        class="hover:text-[#24A1DE] transition-colors"
-                    >
-                        <TelegramIcon size={32} />
-                    </a>
-                    <a
-                        href={SOCIAL_LINKS.discord}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Discord Open Source UC"
-                        class="hover:text-[#5865F2] transition-colors"
-                    >
-                        <DiscordIcon size={32} />
-                    </a>
-                    <a
-                        href="https://github.com/open-source-uc"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub Open Source UC"
-                        class="hover:text-[#181717] transition-colors"
-                    >
-                        <GitHubIcon size={32} />
-                    </a>
-                </div>
-            </div>
-        </div>
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-8 [&>li]:text-lg">
+        <li>
+          <a href="/about" class="hover:underline">About US</a>
+        </li>
+        <li>
+          <a href="/#projects" class="hover:underline">Projects</a>
+        </li>
+      </ul>
     </nav>
 
-    <!-- Overlay para cerrar el menú al hacer click fuera -->
     <label
+      for="menu-toggle"
+      class="text-foreground relative z-50 cursor-pointer md:hidden"
+    >
+      <MenuIcon size={32} />
+    </label>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav
+    id="mobile-menu"
+    class="bg-background fixed top-0 -right-full z-55 h-dvh w-full transition-all duration-300 peer-checked/menu:right-0 md:hidden"
+  >
+    <div class="flex h-full flex-col justify-between p-8 pt-20">
+      <!-- Botón de cerrar -->
+      <label
         for="menu-toggle"
-        class="md:hidden fixed inset-0 bg-black/50 opacity-0 peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto pointer-events-none transition-opacity duration-300 z-54"
-    ></label>
+        class="text-foreground hover:text-primary absolute top-6 right-6 cursor-pointer transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </label>
+
+      <!-- Logo y título -->
+      <div class="flex flex-col gap-8">
+        <div class="flex items-center gap-4">
+          <OsucIcon size={48} />
+          <h2 class="text-3xl font-bold">Open Source UC</h2>
+        </div>
+
+        <!-- Links de navegación -->
+        <ul class="flex flex-col gap-6 text-2xl">
+          <li>
+            <a href="/" class="hover:text-primary block transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="/about" class="hover:text-primary block transition-colors"
+              >About US</a
+            >
+          </li>
+          <li>
+            <a
+              href="/#projects"
+              class="hover:text-primary block transition-colors">Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="/conduct"
+              class="hover:text-primary block transition-colors"
+              >Code of Conduct</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="flex flex-col gap-6">
+        <h3 class="text-foreground/80 text-xl font-semibold">Síguenos</h3>
+        <div class="flex gap-6">
+          <a
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram Open Source UC"
+            class="transition-colors hover:text-[#c13584]"
+          >
+            <InstagramIcon size={32} />
+          </a>
+          <a
+            href={SOCIAL_LINKS.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram Open Source UC"
+            class="transition-colors hover:text-[#24A1DE]"
+          >
+            <TelegramIcon size={32} />
+          </a>
+          <a
+            href={SOCIAL_LINKS.discord}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Discord Open Source UC"
+            class="transition-colors hover:text-[#5865F2]"
+          >
+            <DiscordIcon size={32} />
+          </a>
+          <a
+            href="https://github.com/open-source-uc"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Open Source UC"
+            class="transition-colors hover:text-[#181717]"
+          >
+            <GitHubIcon size={32} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Overlay para cerrar el menú al hacer click fuera -->
+  <label
+    for="menu-toggle"
+    class="pointer-events-none fixed inset-0 z-54 bg-black/50 opacity-0 transition-opacity duration-300 peer-checked/menu:pointer-events-auto peer-checked/menu:opacity-100 md:hidden"
+  ></label>
 </header>

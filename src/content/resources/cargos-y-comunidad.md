@@ -54,9 +54,9 @@ Representación textual:
 ## 1. Principios generales de organización
 
 1. Open Source eUC se organiza en torno a:
-    - Una Asamblea de personas miembros, que constituye el espacio de decisión colectiva.
-    - Un Directorio, encargado de la coordinación general y la gestión básica de la comunidad.
-    - Un conjunto de roles operativos, orientados a llevar a cabo las actividades técnicas, formativas y comunitarias.
+   - Una Asamblea de personas miembros, que constituye el espacio de decisión colectiva.
+   - Un Directorio, encargado de la coordinación general y la gestión básica de la comunidad.
+   - Un conjunto de roles operativos, orientados a llevar a cabo las actividades técnicas, formativas y comunitarias.
 2. Todas las funciones descritas en este documento son de carácter voluntario, ejercidas principalmente por estudiantes universitarios.
 3. Ninguna persona podrá concentrar de forma exclusiva las decisiones críticas de la comunidad. Las decisiones relevantes deberán contar, al menos, con la participación de dos cargos distintos del Directorio.
 
@@ -147,8 +147,8 @@ Este cargo se reporta directamente a la Presidencia / Coordinación Alumni en ma
 #### Modelo de cuentas y tarjetas
 
 - La comunidad opera bajo un **modelo de dos tarjetas bancarias**:
-    - **Tarjeta Fuente:** Tarjeta principal vinculada a la cuenta bancaria de la Presidencia Alumni, usada para aprovisionar fondos.
-    - **Tarjeta Esclava:** Tarjeta operativa usada por Tesorería / Finanzas para realizar gastos autorizados.
+  - **Tarjeta Fuente:** Tarjeta principal vinculada a la cuenta bancaria de la Presidencia Alumni, usada para aprovisionar fondos.
+  - **Tarjeta Esclava:** Tarjeta operativa usada por Tesorería / Finanzas para realizar gastos autorizados.
 - Este modelo asegura separación de funciones y trazabilidad de los movimientos financieros.
 
 #### Limitaciones y contrapesos
@@ -214,9 +214,9 @@ La Presidencia / Coordinación Alumni tiene por finalidad gestionar y articular 
 - Identificar y canalizar oportunidades de colaboración entre la comunidad alumni y Open Source eUC.
 - Reportar periódicamente al Directorio sobre el estado y actividades de la comunidad alumni.
 - **Gestión administrativa y financiera:**
-    - Ser titular de la cuenta bancaria principal de la comunidad.
-    - Supervisar las solicitudes de fondos realizadas por Tesorería / Finanzas.
-    - Aprobar las rendiciones de gastos presentadas por Tesorería / Finanzas.
+  - Ser titular de la cuenta bancaria principal de la comunidad.
+  - Supervisar las solicitudes de fondos realizadas por Tesorería / Finanzas.
+  - Aprobar las rendiciones de gastos presentadas por Tesorería / Finanzas.
 
 #### Requisitos para el cargo
 

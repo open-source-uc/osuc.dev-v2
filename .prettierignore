@@ -1,0 +1,24 @@
+# Astro config and Svelte config
+astro.config.mjs
+
+# Wrangler config
+wrangler.jsonc
+
+# build output (if any)
+dist/
+
+# node modules
+node_modules/
+
+# lock files
+package-lock.json
+pnpm-lock.yaml
+
+# environment files
+.env*
+
+# public assets
+public/
+
+# worker configuration types
+worker-configuration.d.ts

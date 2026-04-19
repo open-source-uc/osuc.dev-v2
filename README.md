@@ -6,7 +6,6 @@
 
 <div align="center">
 
-
 ![Astro](https://img.shields.io/badge/Astro-5.15.8-ff5d01?style=for-the-badge&logo=astro&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.17-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-3178c6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -58,12 +57,12 @@ Disponible en: `http://localhost:4321`
 
 Todos los comandos se ejecutan desde la raíz del proyecto:
 
-| Comando | Acción |
-| :-- | :-- |
-| `pnpm install` | Instala dependencias |
-| `pnpm dev` | Inicia servidor local en `localhost:4321` |
-| `pnpm build` | Construye el sitio para producción en `./dist/` |
-| `pnpm preview` | Previsualiza el build localmente |
+| Comando        | Acción                                          |
+| :------------- | :---------------------------------------------- |
+| `pnpm install` | Instala dependencias                            |
+| `pnpm dev`     | Inicia servidor local en `localhost:4321`       |
+| `pnpm build`   | Construye el sitio para producción en `./dist/` |
+| `pnpm preview` | Previsualiza el build localmente                |
 
 ## ✨ Características
 
