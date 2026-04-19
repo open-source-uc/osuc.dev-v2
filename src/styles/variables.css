@@ -1,16 +1,16 @@
 :root {
-  --background: #1f1b19;
-  --foreground: #e4e4e4;
-  --primary: #138dff;
-  --secondary: #b39cd0;
-  --subtle: #ffc1cc;
+    --background: #0d1117;
+    --foreground: #e4e4e4;
+    --primary: #138dff;
+    --secondary: #b39cd0;
+    --subtle: #ffc1cc;
 }
 
 @theme static inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-subtle: var(--subtle);
-  --font-sans: "Funnel Display Variable", sans-serif;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-subtle: var(--subtle);
+    --font-sans: "Funnel Display Variable", sans-serif;
 }
