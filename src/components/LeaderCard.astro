@@ -9,19 +9,30 @@ interface Props {
   github: string | null;
   linkedin: string | null;
   instagram: string | null;
+  className?: string;
 }
 
-const { name, role, description, github, linkedin, instagram } = Astro.props;
+const {
+  name,
+  role,
+  description,
+  github,
+  linkedin,
+  instagram,
+  className = "",
+} = Astro.props;
 
 let descriptionText = description.length == 0 ? role : description;
 ---
 
 <div
-  class="border-foreground/30 m-2 flex min-h-64 flex-col items-center gap-4 rounded-xl border-2 p-6 align-middle md:gap-6"
+  class={`border-foreground/30 m-2 flex flex-col items-center gap-4 rounded-xl border-2 p-6 align-middle md:gap-6 ${className}`}
 >
   <header class="flex w-full items-center gap-4">
     <img
-      src={github ? `https://github.com/${github}.png` : undefined}
+      src={github
+        ? `https://github.com/${github}.png`
+        : `https://ui-avatars.com/api/?name=${name.split(" ").join("+")}`}
       alt={name}
       class="col-start-1 col-end-2 row-start-1 row-end-3 size-12 shrink-0 rounded-full sm:size-15"
       loading="lazy"
